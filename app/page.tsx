@@ -1,5 +1,6 @@
 import { TopToolbar } from '@/components/toolbar/TopToolbar';
 import { ComponentSidebar } from '@/components/sidebar/ComponentSidebar';
+import { PropertiesPanel } from "@/components/properties/PropertiesPanel";
 import { Canvas } from '@/components/canvas/Canvas';
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="flex flex-1 overflow-hidden">
         <ComponentSidebar />
         <Canvas />
+        <PropertiesPanel />
       </div>
     </div>
   );

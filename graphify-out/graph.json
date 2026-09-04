@@ -4,6 +4,45 @@
   "graph": {},
   "nodes": [
     {
+      "id": "components_nodes_systemnode_systemnodedata",
+      "label": "SystemNodeData",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "systemnodedata",
+      "source_file": "components/nodes/SystemNode.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "data_components_componentcategory",
+      "label": "ComponentCategory",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "componentcategory",
+      "source_file": "data/components.ts",
+      "source_location": "L17"
+    },
+    {
+      "id": "data_components_systemcomponent",
+      "label": "SystemComponent",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "systemcomponent",
+      "source_file": "data/components.ts",
+      "source_location": "L27"
+    },
+    {
       "id": "store_diagramstore_diagramstate",
       "label": "DiagramState",
       "_callable": true,
@@ -14,7 +53,7 @@
       "file_type": "code",
       "norm_label": "diagramstate",
       "source_file": "store/diagramStore.ts",
-      "source_location": "L18"
+      "source_location": "L20"
     },
     {
       "id": "store_diagramstore_tool",
@@ -27,7 +66,7 @@
       "file_type": "code",
       "norm_label": "tool",
       "source_file": "store/diagramStore.ts",
-      "source_location": "L16"
+      "source_location": "L18"
     },
     {
       "id": "components_ui_button_button",
@@ -42,6 +81,78 @@
       "source_location": "L42"
     },
     {
+      "id": "components_canvas_canvas_flowcanvas",
+      "label": "FlowCanvas()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "flowcanvas()",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "components_canvas_canvas_getid",
+      "label": "getId()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "getid()",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "components_edges_customedge_customedge",
+      "label": "CustomEdge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "customedge()",
+      "source_file": "components/edges/CustomEdge.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "components_nodes_systemnode_systemnode",
+      "label": "SystemNode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "systemnode()",
+      "source_file": "components/nodes/SystemNode.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "components_sidebar_componentsidebar_componentsidebar",
+      "label": "ComponentSidebar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "componentsidebar()",
+      "source_file": "components/sidebar/ComponentSidebar.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "data_components_geticoncomponent",
+      "label": "getIconComponent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "geticoncomponent()",
+      "source_file": "data/components.ts",
+      "source_location": "L65"
+    },
+    {
       "id": "app_layout_rootlayout",
       "label": "RootLayout()",
       "_callable": true,
@@ -51,7 +162,19 @@
       "file_type": "code",
       "norm_label": "rootlayout()",
       "source_file": "app/layout.tsx",
-      "source_location": "L20"
+      "source_location": "L22"
+    },
+    {
+      "id": "components_theme_provider_themeprovider",
+      "label": "ThemeProvider()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "layout.tsx",
+      "file_type": "code",
+      "norm_label": "themeprovider()",
+      "source_file": "components/theme-provider.tsx",
+      "source_location": "L6"
     },
     {
       "id": "app_page_home",
@@ -63,7 +186,7 @@
       "file_type": "code",
       "norm_label": "home()",
       "source_file": "app/page.tsx",
-      "source_location": "L5"
+      "source_location": "L6"
     },
     {
       "id": "components_canvas_canvas_canvas",
@@ -75,31 +198,31 @@
       "file_type": "code",
       "norm_label": "canvas()",
       "source_file": "components/canvas/Canvas.tsx",
-      "source_location": "L39"
+      "source_location": "L103"
     },
     {
-      "id": "components_canvas_canvas_flowcanvas",
-      "label": "FlowCanvas()",
+      "id": "components_properties_propertiespanel_propertiespanel",
+      "label": "PropertiesPanel()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "page.tsx",
       "file_type": "code",
-      "norm_label": "flowcanvas()",
-      "source_file": "components/canvas/Canvas.tsx",
-      "source_location": "L15"
+      "norm_label": "propertiespanel()",
+      "source_file": "components/properties/PropertiesPanel.tsx",
+      "source_location": "L8"
     },
     {
-      "id": "components_sidebar_componentsidebar_componentsidebar",
-      "label": "ComponentSidebar()",
+      "id": "components_theme_toggle_themetoggle",
+      "label": "ThemeToggle()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "page.tsx",
       "file_type": "code",
-      "norm_label": "componentsidebar()",
-      "source_file": "components/sidebar/ComponentSidebar.tsx",
-      "source_location": "L3"
+      "norm_label": "themetoggle()",
+      "source_file": "components/theme-toggle.tsx",
+      "source_location": "L7"
     },
     {
       "id": "components_toolbar_toptoolbar_toptoolbar",
@@ -111,7 +234,7 @@
       "file_type": "code",
       "norm_label": "toptoolbar()",
       "source_file": "components/toolbar/TopToolbar.tsx",
-      "source_location": "L3"
+      "source_location": "L9"
     },
     {
       "id": "package_devdependencies",
@@ -122,7 +245,7 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "package_devdependencies_eslint",
@@ -133,7 +256,7 @@
       "file_type": "code",
       "norm_label": "eslint",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "package_devdependencies_eslint_config_next",
@@ -144,7 +267,7 @@
       "file_type": "code",
       "norm_label": "eslint-config-next",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "package_devdependencies_tailwindcss",
@@ -155,7 +278,7 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "package_devdependencies_tailwindcss_postcss",
@@ -166,7 +289,7 @@
       "file_type": "code",
       "norm_label": "@tailwindcss/postcss",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "package_devdependencies_types_node",
@@ -177,7 +300,7 @@
       "file_type": "code",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "package_devdependencies_types_react",
@@ -188,7 +311,7 @@
       "file_type": "code",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "package_devdependencies_types_react_dom",
@@ -199,7 +322,7 @@
       "file_type": "code",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "package_devdependencies_typescript",
@@ -210,7 +333,7 @@
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "eslint",
@@ -221,7 +344,7 @@
       "file_type": "concept",
       "norm_label": "eslint",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "eslint_config_next",
@@ -232,7 +355,7 @@
       "file_type": "concept",
       "norm_label": "eslint-config-next",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "tailwindcss",
@@ -243,7 +366,7 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "tailwindcss_postcss",
@@ -254,7 +377,7 @@
       "file_type": "concept",
       "norm_label": "@tailwindcss/postcss",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "types_node",
@@ -265,7 +388,7 @@
       "file_type": "concept",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "types_react",
@@ -276,7 +399,7 @@
       "file_type": "concept",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "types_react_dom",
@@ -287,7 +410,7 @@
       "file_type": "concept",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "typescript",
@@ -298,7 +421,7 @@
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "tsconfig_compileroptions",
@@ -774,582 +897,6 @@
       "source_location": "L5"
     },
     {
-      "id": "product_requirements_document_prd_58_mvp_scope",
-      "label": "58. MVP Scope",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "58. mvp scope",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1464"
-    },
-    {
-      "id": "product_requirements_document_prd_canvas",
-      "label": "Canvas",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "canvas",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1468"
-    },
-    {
-      "id": "product_requirements_document_prd_components",
-      "label": "Components",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "components",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1476"
-    },
-    {
-      "id": "product_requirements_document_prd_connections",
-      "label": "Connections",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "connections",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1496"
-    },
-    {
-      "id": "product_requirements_document_prd_editing",
-      "label": "Editing",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "editing",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1487"
-    },
-    {
-      "id": "product_requirements_document_prd_file",
-      "label": "File",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "file",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1520"
-    },
-    {
-      "id": "product_requirements_document_prd_image_export",
-      "label": "Image Export",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "image export",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1525"
-    },
-    {
-      "id": "product_requirements_document_prd_persistence",
-      "label": "Persistence",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "persistence",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1516"
-    },
-    {
-      "id": "product_requirements_document_prd_state",
-      "label": "State",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "state",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1509"
-    },
-    {
-      "id": "product_requirements_document_prd_text",
-      "label": "Text",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "58. MVP Scope",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "text",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1503"
-    },
-    {
-      "id": "product_requirements_document_prd_7_1_people",
-      "label": "7.1 People",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.1 people",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L200"
-    },
-    {
-      "id": "product_requirements_document_prd_7_2_applications",
-      "label": "7.2 Applications",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.2 applications",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L208"
-    },
-    {
-      "id": "product_requirements_document_prd_7_3_compute",
-      "label": "7.3 Compute",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.3 compute",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L216"
-    },
-    {
-      "id": "product_requirements_document_prd_7_4_data",
-      "label": "7.4 Data",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.4 data",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L224"
-    },
-    {
-      "id": "product_requirements_document_prd_7_5_communication",
-      "label": "7.5 Communication",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.5 communication",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L232"
-    },
-    {
-      "id": "product_requirements_document_prd_7_6_networking",
-      "label": "7.6 Networking",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.6 networking",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L240"
-    },
-    {
-      "id": "product_requirements_document_prd_7_7_security",
-      "label": "7.7 Security",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.7 security",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L248"
-    },
-    {
-      "id": "product_requirements_document_prd_7_8_external",
-      "label": "7.8 External",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.8 external",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L256"
-    },
-    {
-      "id": "product_requirements_document_prd_7_9_annotation",
-      "label": "7.9 Annotation",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7.9 annotation",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L263"
-    },
-    {
-      "id": "product_requirements_document_prd_7_component_library",
-      "label": "7. Component Library",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "7. Component Library",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7. component library",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L198"
-    },
-    {
-      "id": "product_requirements_document_prd_64_development_principles",
-      "label": "64. Development Principles",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "64. Development Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "64. development principles",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1630"
-    },
-    {
-      "id": "product_requirements_document_prd_component_driven",
-      "label": "Component-driven",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "64. Development Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "component-driven",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1642"
-    },
-    {
-      "id": "product_requirements_document_prd_extensible",
-      "label": "Extensible",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "64. Development Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "extensible",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1646"
-    },
-    {
-      "id": "product_requirements_document_prd_local_first",
-      "label": "Local-first",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "64. Development Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "local-first",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1634"
-    },
-    {
-      "id": "product_requirements_document_prd_model_first",
-      "label": "Model-first",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "64. Development Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "model-first",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1638"
-    },
-    {
-      "id": "product_requirements_document_prd_performance_first",
-      "label": "Performance-first",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "64. Development Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "performance-first",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1658"
-    },
-    {
-      "id": "product_requirements_document_prd_progressive_enhancement",
-      "label": "Progressive enhancement",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "64. Development Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "progressive enhancement",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1654"
-    },
-    {
-      "id": "product_requirements_document_prd_technology_agnostic",
-      "label": "Technology-agnostic",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "64. Development Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "technology-agnostic",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1650"
-    },
-    {
-      "id": "product_requirements_document_prd_type_safe",
-      "label": "Type-safe",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "64. Development Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "type-safe",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1662"
-    },
-    {
-      "id": "product_requirements_document_prd_5_1_developers",
-      "label": "5.1 Developers",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "5. Target Users",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5.1 developers",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L113"
-    },
-    {
-      "id": "product_requirements_document_prd_5_2_system_design_interview_candidates",
-      "label": "5.2 System Design Interview Candidates",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "5. Target Users",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5.2 system design interview candidates",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L127"
-    },
-    {
-      "id": "product_requirements_document_prd_5_3_students",
-      "label": "5.3 Students",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "5. Target Users",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5.3 students",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L142"
-    },
-    {
-      "id": "product_requirements_document_prd_5_4_technical_educators",
-      "label": "5.4 Technical Educators",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "5. Target Users",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5.4 technical educators",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L148"
-    },
-    {
-      "id": "product_requirements_document_prd_5_5_architects_and_engineers",
-      "label": "5.5 Architects and Engineers",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "5. Target Users",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5.5 architects and engineers",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L154"
-    },
-    {
-      "id": "product_requirements_document_prd_5_6_consultants",
-      "label": "5.6 Consultants",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "5. Target Users",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5.6 consultants",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L160"
-    },
-    {
-      "id": "product_requirements_document_prd_5_target_users",
-      "label": "5. Target Users",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "5. Target Users",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. target users",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L111"
-    },
-    {
-      "id": "product_requirements_document_prd_11_canvas_types",
-      "label": "11. Canvas Types",
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "11. Canvas Types",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "11. canvas types",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L363"
-    },
-    {
-      "id": "product_requirements_document_prd_fixed_canvas",
-      "label": "Fixed Canvas",
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "11. Canvas Types",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "fixed canvas",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L371"
-    },
-    {
-      "id": "product_requirements_document_prd_infinite_canvas",
-      "label": "Infinite Canvas",
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "11. Canvas Types",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "infinite canvas",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L367"
-    },
-    {
-      "id": "product_requirements_document_prd_orientation",
-      "label": "Orientation",
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "11. Canvas Types",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "orientation",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L381"
-    },
-    {
-      "id": "product_requirements_document_prd_39_sharing_future",
-      "label": "39. Sharing \u2014 Future",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "39. Sharing \u2014 Future",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "39. sharing \u2014 future",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1027"
-    },
-    {
-      "id": "product_requirements_document_prd_cloud_sharing",
-      "label": "Cloud Sharing",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "39. Sharing \u2014 Future",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "cloud sharing",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1043"
-    },
-    {
-      "id": "product_requirements_document_prd_file_sharing",
-      "label": "File Sharing",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "39. Sharing \u2014 Future",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "file sharing",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1031"
-    },
-    {
-      "id": "product_requirements_document_prd_url_sharing",
-      "label": "URL Sharing",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "39. Sharing \u2014 Future",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "url sharing",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1035"
-    },
-    {
-      "id": "product_requirements_document_prd_56_ai_future_optional_layer",
-      "label": "56. AI \u2014 Future Optional Layer",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "56. AI \u2014 Future Optional Layer",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "56. ai \u2014 future optional layer",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1394"
-    },
-    {
-      "id": "product_requirements_document_prd_diagram_documentation",
-      "label": "Diagram \u2192 Documentation",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "56. AI \u2014 Future Optional Layer",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "diagram \u2192 documentation",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1410"
-    },
-    {
-      "id": "product_requirements_document_prd_diagram_explanation",
-      "label": "Diagram \u2192 Explanation",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "56. AI \u2014 Future Optional Layer",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "diagram \u2192 explanation",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1400"
-    },
-    {
-      "id": "product_requirements_document_prd_natural_language_diagram",
-      "label": "Natural Language \u2192 Diagram",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "56. AI \u2014 Future Optional Layer",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "natural language \u2192 diagram",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1420"
-    },
-    {
       "id": "readme",
       "label": "README.md",
       "_origin": "ast",
@@ -1464,6 +1011,17 @@
       "source_location": "L17"
     },
     {
+      "id": "package_dependencies_next_themes",
+      "label": "next-themes",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "next-themes",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
       "id": "package_dependencies_react",
       "label": "react",
       "_origin": "ast",
@@ -1472,7 +1030,7 @@
       "file_type": "code",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "package_dependencies_react_dom",
@@ -1483,7 +1041,7 @@
       "file_type": "code",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "package_dependencies_shadcn",
@@ -1494,7 +1052,7 @@
       "file_type": "code",
       "norm_label": "shadcn",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "package_dependencies_tw_animate_css",
@@ -1505,7 +1063,7 @@
       "file_type": "code",
       "norm_label": "tw-animate-css",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "package_dependencies_xyflow_react",
@@ -1527,7 +1085,7 @@
       "file_type": "code",
       "norm_label": "zustand",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "base_ui_react",
@@ -1585,6 +1143,17 @@
       "source_location": "L17"
     },
     {
+      "id": "next_themes",
+      "label": "next-themes",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "dependencies",
+      "file_type": "concept",
+      "norm_label": "next-themes",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
       "id": "react",
       "label": "react",
       "_origin": "ast",
@@ -1593,7 +1162,7 @@
       "file_type": "concept",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "react_dom",
@@ -1604,7 +1173,7 @@
       "file_type": "concept",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "shadcn",
@@ -1615,7 +1184,7 @@
       "file_type": "concept",
       "norm_label": "shadcn",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "tw_animate_css",
@@ -1626,7 +1195,7 @@
       "file_type": "concept",
       "norm_label": "tw-animate-css",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "xyflow_react",
@@ -1648,7 +1217,7 @@
       "file_type": "concept",
       "norm_label": "zustand",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "components_ui_button",
@@ -1671,42 +1240,6 @@
       "norm_label": "buttonvariants",
       "source_file": "components/ui/button.tsx",
       "source_location": "L5"
-    },
-    {
-      "id": "product_requirements_document_prd_1_1_product_name",
-      "label": "1.1 Product Name",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "1. Product Overview",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1.1 product name",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L19"
-    },
-    {
-      "id": "product_requirements_document_prd_1_2_product_vision",
-      "label": "1.2 Product Vision",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "1. Product Overview",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1.2 product vision",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L29"
-    },
-    {
-      "id": "product_requirements_document_prd_1_product_overview",
-      "label": "1. Product Overview",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "1. Product Overview",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. product overview",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L17"
     },
     {
       "id": "agents",
@@ -1811,102 +1344,6 @@
       "norm_label": "graphify",
       "source_file": "GEMINI.md",
       "source_location": "L1"
-    },
-    {
-      "id": "product_requirements_document_prd_10_canvas",
-      "label": "10. Canvas",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "10. Canvas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "10. canvas",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L339"
-    },
-    {
-      "id": "product_requirements_document_prd_canvas_requirements",
-      "label": "Canvas Requirements",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "10. Canvas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "canvas requirements",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L343"
-    },
-    {
-      "id": "product_requirements_document_prd_21_persistence",
-      "label": "21. Persistence",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "21. Persistence",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "21. persistence",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L613"
-    },
-    {
-      "id": "product_requirements_document_prd_v1",
-      "label": "V1",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "21. Persistence",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "v1",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L615"
-    },
-    {
-      "id": "product_requirements_document_prd_3_product_goals",
-      "label": "3. Product Goals",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "3. Product Goals",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. product goals",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L73"
-    },
-    {
-      "id": "product_requirements_document_prd_primary_goals",
-      "label": "Primary Goals",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "3. Product Goals",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "primary goals",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L75"
-    },
-    {
-      "id": "product_requirements_document_prd_48_core_user_flow",
-      "label": "48. Core User Flow",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "48. Core User Flow",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "48. core user flow",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1221"
-    },
-    {
-      "id": "product_requirements_document_prd_new_diagram",
-      "label": "New Diagram",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "48. Core User Flow",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "new diagram",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1223"
     },
     {
       "id": "tsconfig",
@@ -2031,26 +1468,102 @@
       "source_location": "L1"
     },
     {
+      "id": "components_canvas_canvas",
+      "label": "Canvas.tsx",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "canvas.tsx",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_canvas_canvas_edgetypes",
+      "label": "edgeTypes",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "edgetypes",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "components_canvas_canvas_nodetypes",
+      "label": "nodeTypes",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "nodetypes",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "components_edges_customedge",
+      "label": "CustomEdge.tsx",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "customedge.tsx",
+      "source_file": "components/edges/CustomEdge.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_nodes_systemnode",
+      "label": "SystemNode.tsx",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "systemnode.tsx",
+      "source_file": "components/nodes/SystemNode.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_sidebar_componentsidebar",
+      "label": "ComponentSidebar.tsx",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "componentsidebar.tsx",
+      "source_file": "components/sidebar/ComponentSidebar.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "data_components",
+      "label": "components.ts",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "components.ts",
+      "source_file": "data/components.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "data_components_component_registry",
+      "label": "COMPONENT_REGISTRY",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Canvas.tsx",
+      "file_type": "code",
+      "norm_label": "component_registry",
+      "source_file": "data/components.ts",
+      "source_location": "L35"
+    },
+    {
       "id": "lib_utils",
       "label": "utils.ts",
       "_origin": "ast",
       "community": 31,
-      "community_name": "utils.ts",
+      "community_name": "Canvas.tsx",
       "file_type": "code",
       "norm_label": "utils.ts",
       "source_file": "lib/utils.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "rules",
-      "label": "rules.md",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "rules.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "rules.md",
-      "source_file": "rules.md",
       "source_location": "L1"
     },
     {
@@ -2197,712 +1710,15 @@
       "source_location": "L15"
     },
     {
-      "id": "product_requirements_document_prd",
-      "label": "Product Requirements Document (PRD).md",
+      "id": "components_theme_provider",
+      "label": "theme-provider.tsx",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "product requirements document (prd).md",
-      "source_file": "Product Requirements Document (PRD).md",
+      "community": 5,
+      "community_name": "layout.tsx",
+      "file_type": "code",
+      "norm_label": "theme-provider.tsx",
+      "source_file": "components/theme-provider.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "product_requirements_document_prd_12_component_interaction",
-      "label": "12. Component Interaction",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "12. component interaction",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L388"
-    },
-    {
-      "id": "product_requirements_document_prd_13_drag_and_drop",
-      "label": "13. Drag and Drop",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "13. drag and drop",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L405"
-    },
-    {
-      "id": "product_requirements_document_prd_14_connections",
-      "label": "14. Connections",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "14. connections",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L427"
-    },
-    {
-      "id": "product_requirements_document_prd_15_connection_semantics",
-      "label": "15. Connection Semantics",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "15. connection semantics",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L455"
-    },
-    {
-      "id": "product_requirements_document_prd_16_properties_panel",
-      "label": "16. Properties Panel",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "16. properties panel",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L482"
-    },
-    {
-      "id": "product_requirements_document_prd_17_diagram_data_model",
-      "label": "17. Diagram Data Model",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "17. diagram data model",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L514"
-    },
-    {
-      "id": "product_requirements_document_prd_18_node_model",
-      "label": "18. Node Model",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "18. node model",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L537"
-    },
-    {
-      "id": "product_requirements_document_prd_19_edge_model",
-      "label": "19. Edge Model",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "19. edge model",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L567"
-    },
-    {
-      "id": "product_requirements_document_prd_20_local_first_architecture",
-      "label": "20. Local-First Architecture",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "20. local-first architecture",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L585"
-    },
-    {
-      "id": "product_requirements_document_prd_22_native_project_format",
-      "label": "22. Native Project Format",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "22. native project format",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L630"
-    },
-    {
-      "id": "product_requirements_document_prd_23_import",
-      "label": "23. Import",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "23. import",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L654"
-    },
-    {
-      "id": "product_requirements_document_prd_24_export",
-      "label": "24. Export",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "24. export",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L678"
-    },
-    {
-      "id": "product_requirements_document_prd_25_undo_and_redo",
-      "label": "25. Undo and Redo",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "25. undo and redo",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L697"
-    },
-    {
-      "id": "product_requirements_document_prd_26_keyboard_shortcuts",
-      "label": "26. Keyboard Shortcuts",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "26. keyboard shortcuts",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L723"
-    },
-    {
-      "id": "product_requirements_document_prd_27_copy_and_paste",
-      "label": "27. Copy and Paste",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "27. copy and paste",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L749"
-    },
-    {
-      "id": "product_requirements_document_prd_28_grouping",
-      "label": "28. Grouping",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "28. grouping",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L763"
-    },
-    {
-      "id": "product_requirements_document_prd_29_boundaries",
-      "label": "29. Boundaries",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "29. boundaries",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L782"
-    },
-    {
-      "id": "product_requirements_document_prd_2_problem_statement",
-      "label": "2. Problem Statement",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. problem statement",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L53"
-    },
-    {
-      "id": "product_requirements_document_prd_30_notes_and_annotations",
-      "label": "30. Notes and Annotations",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "30. notes and annotations",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L806"
-    },
-    {
-      "id": "product_requirements_document_prd_31_templates",
-      "label": "31. Templates",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "31. templates",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L823"
-    },
-    {
-      "id": "product_requirements_document_prd_32_presentation_mode",
-      "label": "32. Presentation Mode",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "32. presentation mode",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L843"
-    },
-    {
-      "id": "product_requirements_document_prd_33_search",
-      "label": "33. Search",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "33. search",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L883"
-    },
-    {
-      "id": "product_requirements_document_prd_34_component_registry",
-      "label": "34. Component Registry",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "34. component registry",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L912"
-    },
-    {
-      "id": "product_requirements_document_prd_35_custom_components",
-      "label": "35. Custom Components",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "35. custom components",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L938"
-    },
-    {
-      "id": "product_requirements_document_prd_36_themes",
-      "label": "36. Themes",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "36. themes",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L961"
-    },
-    {
-      "id": "product_requirements_document_prd_37_collaboration_future",
-      "label": "37. Collaboration \u2014 Future",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "37. collaboration \u2014 future",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L979"
-    },
-    {
-      "id": "product_requirements_document_prd_38_cloud_saving_future",
-      "label": "38. Cloud Saving \u2014 Future",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "38. cloud saving \u2014 future",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1002"
-    },
-    {
-      "id": "product_requirements_document_prd_40_offline_support",
-      "label": "40. Offline Support",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "40. offline support",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1049"
-    },
-    {
-      "id": "product_requirements_document_prd_41_performance_requirements",
-      "label": "41. Performance Requirements",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "41. performance requirements",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1063"
-    },
-    {
-      "id": "product_requirements_document_prd_42_accessibility",
-      "label": "42. Accessibility",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "42. accessibility",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1086"
-    },
-    {
-      "id": "product_requirements_document_prd_43_responsive_design",
-      "label": "43. Responsive Design",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "43. responsive design",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1100"
-    },
-    {
-      "id": "product_requirements_document_prd_44_security",
-      "label": "44. Security",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "44. security",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1117"
-    },
-    {
-      "id": "product_requirements_document_prd_45_application_architecture",
-      "label": "45. Application Architecture",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "45. application architecture",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1132"
-    },
-    {
-      "id": "product_requirements_document_prd_46_state_architecture",
-      "label": "46. State Architecture",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "46. state architecture",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1168"
-    },
-    {
-      "id": "product_requirements_document_prd_47_rendering_architecture",
-      "label": "47. Rendering Architecture",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "47. rendering architecture",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1195"
-    },
-    {
-      "id": "product_requirements_document_prd_49_detailed_diagram_creation_flow",
-      "label": "49. Detailed Diagram Creation Flow",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "49. detailed diagram creation flow",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1247"
-    },
-    {
-      "id": "product_requirements_document_prd_4_non_goals",
-      "label": "4. Non-Goals",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. non-goals",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L92"
-    },
-    {
-      "id": "product_requirements_document_prd_50_local_save_flow",
-      "label": "50. Local Save Flow",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "50. local save flow",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1281"
-    },
-    {
-      "id": "product_requirements_document_prd_51_export_flow",
-      "label": "51. Export Flow",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "51. export flow",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1297"
-    },
-    {
-      "id": "product_requirements_document_prd_52_import_flow",
-      "label": "52. Import Flow",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "52. import flow",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1311"
-    },
-    {
-      "id": "product_requirements_document_prd_53_future_cloud_flow",
-      "label": "53. Future Cloud Flow",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "53. future cloud flow",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1331"
-    },
-    {
-      "id": "product_requirements_document_prd_54_future_collaboration_flow",
-      "label": "54. Future Collaboration Flow",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "54. future collaboration flow",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1351"
-    },
-    {
-      "id": "product_requirements_document_prd_55_version_history",
-      "label": "55. Version History",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "55. version history",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1374"
-    },
-    {
-      "id": "product_requirements_document_prd_57_potential_product_differentiator",
-      "label": "57. Potential Product Differentiator",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "57. potential product differentiator",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1438"
-    },
-    {
-      "id": "product_requirements_document_prd_59_v2",
-      "label": "59. V2",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "59. v2",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1532"
-    },
-    {
-      "id": "product_requirements_document_prd_60_v3",
-      "label": "60. V3",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "60. v3",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1550"
-    },
-    {
-      "id": "product_requirements_document_prd_61_v4",
-      "label": "61. V4",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "61. v4",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1564"
-    },
-    {
-      "id": "product_requirements_document_prd_62_monetization_possibilities",
-      "label": "62. Monetization Possibilities",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "62. monetization possibilities",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1578"
-    },
-    {
-      "id": "product_requirements_document_prd_63_deployment_architecture",
-      "label": "63. Deployment Architecture",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "63. deployment architecture",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1610"
-    },
-    {
-      "id": "product_requirements_document_prd_65_success_criteria",
-      "label": "65. Success Criteria",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "65. success criteria",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1668"
-    },
-    {
-      "id": "product_requirements_document_prd_66_example_complete_user_journey",
-      "label": "66. Example Complete User Journey",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "66. example complete user journey",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1692"
-    },
-    {
-      "id": "product_requirements_document_prd_67_long_term_product_vision",
-      "label": "67. Long-Term Product Vision",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "67. long-term product vision",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1739"
-    },
-    {
-      "id": "product_requirements_document_prd_68_final_product_definition",
-      "label": "68. Final Product Definition",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "68. final product definition",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1775"
-    },
-    {
-      "id": "product_requirements_document_prd_6_core_product_philosophy",
-      "label": "6. Core Product Philosophy",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "6. core product philosophy",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L166"
-    },
-    {
-      "id": "product_requirements_document_prd_8_visual_design_system",
-      "label": "8. Visual Design System",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "8. visual design system",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L275"
-    },
-    {
-      "id": "product_requirements_document_prd_9_main_application_interface",
-      "label": "9. Main Application Interface",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9. main application interface",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L308"
-    },
-    {
-      "id": "product_requirements_document_prd_product_requirements_document_prd",
-      "label": "Product Requirements Document (PRD)",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "product requirements document (prd)",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1"
-    },
-    {
-      "id": "product_requirements_document_prd_system_design_visualizer",
-      "label": "System Design Visualizer",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Product Requirements Document (PRD).md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "system design visualizer",
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L3"
     },
     {
       "id": "app_page",
@@ -2916,25 +1732,25 @@
       "source_location": "L1"
     },
     {
-      "id": "components_canvas_canvas",
-      "label": "Canvas.tsx",
+      "id": "components_properties_propertiespanel",
+      "label": "PropertiesPanel.tsx",
       "_origin": "ast",
       "community": 7,
       "community_name": "page.tsx",
       "file_type": "code",
-      "norm_label": "canvas.tsx",
-      "source_file": "components/canvas/Canvas.tsx",
+      "norm_label": "propertiespanel.tsx",
+      "source_file": "components/properties/PropertiesPanel.tsx",
       "source_location": "L1"
     },
     {
-      "id": "components_sidebar_componentsidebar",
-      "label": "ComponentSidebar.tsx",
+      "id": "components_theme_toggle",
+      "label": "theme-toggle.tsx",
       "_origin": "ast",
       "community": 7,
       "community_name": "page.tsx",
       "file_type": "code",
-      "norm_label": "componentsidebar.tsx",
-      "source_file": "components/sidebar/ComponentSidebar.tsx",
+      "norm_label": "theme-toggle.tsx",
+      "source_file": "components/theme-toggle.tsx",
       "source_location": "L1"
     },
     {
@@ -2968,7 +1784,7 @@
       "file_type": "code",
       "norm_label": "usediagramstore",
       "source_file": "store/diagramStore.ts",
-      "source_location": "L30"
+      "source_location": "L35"
     },
     {
       "id": "eslint_config",
@@ -3025,7 +1841,67 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/canvas/Canvas.tsx",
-      "source_location": "L16",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas_flowcanvas",
+      "target": "components_canvas_canvas_getid",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "components_nodes_systemnode_systemnode",
+      "target": "data_components_geticoncomponent",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/nodes/SystemNode.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "components_properties_propertiespanel_propertiespanel",
+      "target": "store_diagramstore_usediagramstore",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/properties/PropertiesPanel.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "components_sidebar_componentsidebar_componentsidebar",
+      "target": "data_components_geticoncomponent",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/sidebar/ComponentSidebar.tsx",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "components_toolbar_toptoolbar_toptoolbar",
+      "target": "store_diagramstore_usediagramstore",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/toolbar/TopToolbar.tsx",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -3161,6 +2037,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_layout",
+      "target": "components_theme_provider_themeprovider",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/layout.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
       "source": "app_page",
       "target": "components_toolbar_toptoolbar_toptoolbar",
       "relation": "imports",
@@ -3186,7 +2074,7 @@
     },
     {
       "source": "app_page",
-      "target": "components_canvas_canvas_canvas",
+      "target": "components_properties_propertiespanel_propertiespanel",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3194,6 +2082,18 @@
       "context": "import",
       "source_file": "app/page.tsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page",
+      "target": "components_canvas_canvas_canvas",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/page.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -3205,7 +2105,103 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/canvas/Canvas.tsx",
-      "source_location": "L13",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "data_components_component_registry",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "components_nodes_systemnode",
+      "target": "data_components_geticoncomponent",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/nodes/SystemNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "components_properties_propertiespanel",
+      "target": "store_diagramstore_usediagramstore",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/properties/PropertiesPanel.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_sidebar_componentsidebar",
+      "target": "data_components_component_registry",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/sidebar/ComponentSidebar.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_sidebar_componentsidebar",
+      "target": "data_components_componentcategory",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/sidebar/ComponentSidebar.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_sidebar_componentsidebar",
+      "target": "data_components_geticoncomponent",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/sidebar/ComponentSidebar.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_toolbar_toptoolbar",
+      "target": "components_theme_toggle_themetoggle",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/toolbar/TopToolbar.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_toolbar_toptoolbar",
+      "target": "store_diagramstore_usediagramstore",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/toolbar/TopToolbar.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -3269,6 +2265,18 @@
       "weight": 1.0
     },
     {
+      "source": "package_dependencies_next_themes",
+      "target": "next_themes",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
       "source": "package_dependencies_react",
       "target": "react",
       "relation": "imports",
@@ -3277,7 +2285,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -3289,7 +2297,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -3301,7 +2309,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -3313,7 +2321,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -3337,7 +2345,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -3349,7 +2357,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -3361,7 +2369,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -3373,7 +2381,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -3385,7 +2393,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -3397,7 +2405,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -3409,7 +2417,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -3421,7 +2429,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -3433,7 +2441,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout",
+      "target": "components_theme_provider",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/layout.tsx",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -3462,7 +2482,7 @@
     },
     {
       "source": "app_page",
-      "target": "components_canvas_canvas",
+      "target": "components_properties_propertiespanel",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3470,6 +2490,18 @@
       "context": "import",
       "source_file": "app/page.tsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page",
+      "target": "components_canvas_canvas",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/page.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -3481,7 +2513,115 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/canvas/Canvas.tsx",
-      "source_location": "L13",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "components_nodes_systemnode",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "components_edges_customedge",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "data_components",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "components_nodes_systemnode",
+      "target": "data_components",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/nodes/SystemNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "components_nodes_systemnode",
+      "target": "lib_utils",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/nodes/SystemNode.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_properties_propertiespanel",
+      "target": "store_diagramstore",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/properties/PropertiesPanel.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_sidebar_componentsidebar",
+      "target": "data_components",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/sidebar/ComponentSidebar.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_toolbar_toptoolbar",
+      "target": "components_theme_toggle",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/toolbar/TopToolbar.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_toolbar_toptoolbar",
+      "target": "store_diagramstore",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/toolbar/TopToolbar.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -3547,7 +2687,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/layout.tsx",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -3569,7 +2709,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -3750,24 +2890,101 @@
     },
     {
       "source": "components_canvas_canvas",
-      "target": "components_canvas_canvas_flowcanvas",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "components/canvas/Canvas.tsx",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "components_canvas_canvas",
       "target": "components_canvas_canvas_canvas",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/canvas/Canvas.tsx",
-      "source_location": "L39",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "components_canvas_canvas_nodetypes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "components_canvas_canvas_edgetypes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "components_canvas_canvas_getid",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "components_canvas_canvas_flowcanvas",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "components_edges_customedge",
+      "target": "components_edges_customedge_customedge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/edges/CustomEdge.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "components_nodes_systemnode",
+      "target": "components_nodes_systemnode_systemnode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/nodes/SystemNode.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "components_nodes_systemnode",
+      "target": "components_nodes_systemnode_systemnodedata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/nodes/SystemNode.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "components_properties_propertiespanel",
+      "target": "components_properties_propertiespanel_propertiespanel",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/properties/PropertiesPanel.tsx",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -3778,7 +2995,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/sidebar/ComponentSidebar.tsx",
-      "source_location": "L3",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -3837,6 +3054,28 @@
       "weight": 1.0
     },
     {
+      "source": "components_theme_provider",
+      "target": "components_theme_provider_themeprovider",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/theme-provider.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "components_theme_toggle",
+      "target": "components_theme_toggle_themetoggle",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/theme-toggle.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "components_toolbar_toptoolbar",
       "target": "components_toolbar_toptoolbar_toptoolbar",
       "relation": "contains",
@@ -3844,7 +3083,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/toolbar/TopToolbar.tsx",
-      "source_location": "L3",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -3867,6 +3106,50 @@
       "confidence_score": 1.0,
       "source_file": "components/ui/button.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "data_components",
+      "target": "data_components_componentcategory",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "data/components.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "data_components",
+      "target": "data_components_systemcomponent",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "data/components.ts",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "data_components",
+      "target": "data_components_component_registry",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "data/components.ts",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "data_components",
+      "target": "data_components_geticoncomponent",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "data/components.ts",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -3932,7 +3215,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -4036,7 +3319,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_react",
+      "target": "package_dependencies_next_themes",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4047,7 +3330,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_react_dom",
+      "target": "package_dependencies_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4058,7 +3341,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_shadcn",
+      "target": "package_dependencies_react_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4069,7 +3352,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_tw_animate_css",
+      "target": "package_dependencies_shadcn",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4080,13 +3363,24 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_zustand",
+      "target": "package_dependencies_tw_animate_css",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_zustand",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4097,7 +3391,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -4108,7 +3402,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -4119,7 +3413,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -4130,7 +3424,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -4141,7 +3435,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -4152,7 +3446,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -4163,7 +3457,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -4174,7 +3468,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -4233,1293 +3527,6 @@
       "weight": 1.0
     },
     {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_product_requirements_document_prd",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_38_cloud_saving_future",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1002",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_39_sharing_future",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1027",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_40_offline_support",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1049",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_41_performance_requirements",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1063",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_42_accessibility",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1086",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_43_responsive_design",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1100",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_5_target_users",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L111",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_44_security",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1117",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_45_application_architecture",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1132",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_46_state_architecture",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1168",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_47_rendering_architecture",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1195",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_48_core_user_flow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1221",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_49_detailed_diagram_creation_flow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1247",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_50_local_save_flow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1281",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_51_export_flow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1297",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_52_import_flow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1311",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_53_future_cloud_flow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1331",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_54_future_collaboration_flow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1351",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_55_version_history",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1374",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_56_ai_future_optional_layer",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1394",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_57_potential_product_differentiator",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1438",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_58_mvp_scope",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1464",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_59_v2",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1532",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_60_v3",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1550",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_61_v4",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1564",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_62_monetization_possibilities",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1578",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_63_deployment_architecture",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1610",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_64_development_principles",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1630",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_6_core_product_philosophy",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L166",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_65_success_criteria",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1668",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_66_example_complete_user_journey",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1692",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_1_product_overview",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_67_long_term_product_vision",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1739",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_68_final_product_definition",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1775",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_7_component_library",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L198",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_8_visual_design_system",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L275",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_system_design_visualizer",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_9_main_application_interface",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L308",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_10_canvas",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L339",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_11_canvas_types",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L363",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_12_component_interaction",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L388",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_13_drag_and_drop",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L405",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_14_connections",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L427",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_15_connection_semantics",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L455",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_16_properties_panel",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L482",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_17_diagram_data_model",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L514",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_2_problem_statement",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L53",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_18_node_model",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L537",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_19_edge_model",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L567",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_20_local_first_architecture",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L585",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_21_persistence",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L613",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_22_native_project_format",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L630",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_23_import",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L654",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_24_export",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L678",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_25_undo_and_redo",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L697",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_26_keyboard_shortcuts",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L723",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_3_product_goals",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L73",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_27_copy_and_paste",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L749",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_28_grouping",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L763",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_29_boundaries",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L782",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_30_notes_and_annotations",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L806",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_31_templates",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L823",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_32_presentation_mode",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L843",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_33_search",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L883",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_34_component_registry",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L912",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_4_non_goals",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L92",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_35_custom_components",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L938",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_36_themes",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L961",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd",
-      "target": "product_requirements_document_prd_37_collaboration_future",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L979",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_10_canvas",
-      "target": "product_requirements_document_prd_canvas_requirements",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L343",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_11_canvas_types",
-      "target": "product_requirements_document_prd_infinite_canvas",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L367",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_11_canvas_types",
-      "target": "product_requirements_document_prd_fixed_canvas",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L371",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_11_canvas_types",
-      "target": "product_requirements_document_prd_orientation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L381",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_1_product_overview",
-      "target": "product_requirements_document_prd_1_1_product_name",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_1_product_overview",
-      "target": "product_requirements_document_prd_1_2_product_vision",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L29",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_21_persistence",
-      "target": "product_requirements_document_prd_v1",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L615",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_39_sharing_future",
-      "target": "product_requirements_document_prd_file_sharing",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1031",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_39_sharing_future",
-      "target": "product_requirements_document_prd_url_sharing",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1035",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_39_sharing_future",
-      "target": "product_requirements_document_prd_cloud_sharing",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1043",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_3_product_goals",
-      "target": "product_requirements_document_prd_primary_goals",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L75",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_48_core_user_flow",
-      "target": "product_requirements_document_prd_new_diagram",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1223",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_56_ai_future_optional_layer",
-      "target": "product_requirements_document_prd_diagram_explanation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1400",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_56_ai_future_optional_layer",
-      "target": "product_requirements_document_prd_diagram_documentation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1410",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_56_ai_future_optional_layer",
-      "target": "product_requirements_document_prd_natural_language_diagram",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1420",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_58_mvp_scope",
-      "target": "product_requirements_document_prd_canvas",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1468",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_58_mvp_scope",
-      "target": "product_requirements_document_prd_components",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1476",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_58_mvp_scope",
-      "target": "product_requirements_document_prd_editing",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1487",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_58_mvp_scope",
-      "target": "product_requirements_document_prd_connections",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1496",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_58_mvp_scope",
-      "target": "product_requirements_document_prd_text",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1503",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_58_mvp_scope",
-      "target": "product_requirements_document_prd_state",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1509",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_58_mvp_scope",
-      "target": "product_requirements_document_prd_persistence",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1516",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_58_mvp_scope",
-      "target": "product_requirements_document_prd_file",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1520",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_58_mvp_scope",
-      "target": "product_requirements_document_prd_image_export",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1525",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_5_target_users",
-      "target": "product_requirements_document_prd_5_1_developers",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L113",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_5_target_users",
-      "target": "product_requirements_document_prd_5_2_system_design_interview_candidates",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L127",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_5_target_users",
-      "target": "product_requirements_document_prd_5_3_students",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L142",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_5_target_users",
-      "target": "product_requirements_document_prd_5_4_technical_educators",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L148",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_5_target_users",
-      "target": "product_requirements_document_prd_5_5_architects_and_engineers",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L154",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_5_target_users",
-      "target": "product_requirements_document_prd_5_6_consultants",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L160",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_64_development_principles",
-      "target": "product_requirements_document_prd_local_first",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1634",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_64_development_principles",
-      "target": "product_requirements_document_prd_model_first",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1638",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_64_development_principles",
-      "target": "product_requirements_document_prd_component_driven",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1642",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_64_development_principles",
-      "target": "product_requirements_document_prd_extensible",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1646",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_64_development_principles",
-      "target": "product_requirements_document_prd_technology_agnostic",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1650",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_64_development_principles",
-      "target": "product_requirements_document_prd_progressive_enhancement",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1654",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_64_development_principles",
-      "target": "product_requirements_document_prd_performance_first",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1658",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_64_development_principles",
-      "target": "product_requirements_document_prd_type_safe",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L1662",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_7_component_library",
-      "target": "product_requirements_document_prd_7_1_people",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L200",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_7_component_library",
-      "target": "product_requirements_document_prd_7_2_applications",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L208",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_7_component_library",
-      "target": "product_requirements_document_prd_7_3_compute",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L216",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_7_component_library",
-      "target": "product_requirements_document_prd_7_4_data",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L224",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_7_component_library",
-      "target": "product_requirements_document_prd_7_5_communication",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L232",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_7_component_library",
-      "target": "product_requirements_document_prd_7_6_networking",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L240",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_7_component_library",
-      "target": "product_requirements_document_prd_7_7_security",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L248",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_7_component_library",
-      "target": "product_requirements_document_prd_7_8_external",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L256",
-      "weight": 1.0
-    },
-    {
-      "source": "product_requirements_document_prd_7_component_library",
-      "target": "product_requirements_document_prd_7_9_annotation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Product Requirements Document (PRD).md",
-      "source_location": "L263",
-      "weight": 1.0
-    },
-    {
       "source": "readme",
       "target": "readme_learn_more",
       "relation": "contains",
@@ -5560,7 +3567,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "store/diagramStore.ts",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -5571,7 +3578,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "store/diagramStore.ts",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -5582,7 +3589,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "store/diagramStore.ts",
-      "source_location": "L30",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -5782,8 +3789,32 @@
       "source_file": "tsconfig.json",
       "source_location": "L9",
       "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "components_nodes_systemnode_systemnode",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "collection",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "components_canvas_canvas",
+      "target": "components_edges_customedge_customedge",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "collection",
+      "source_file": "components/canvas/Canvas.tsx",
+      "source_location": "L26",
+      "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "5b8334e972eb5103465b18fd703fc6d65b7a7c38"
+  "built_at_commit": "0c1bc9c1c2bb5c078ef7452d020385f4d80e176c"
 }

@@ -9,6 +9,7 @@ import {
   ReactFlowProvider,
   useReactFlow,
   Node,
+  ConnectionMode,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
@@ -87,12 +88,17 @@ function FlowCanvas() {
         onDragOver={onDragOver}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
+        connectionMode={ConnectionMode.Loose}
         fitView
         className="bg-muted/10"
       >
-        <Background />
-        <Controls />
-        <MiniMap />
+        <Background color="hsl(var(--muted-foreground))" gap={16} size={1} className="opacity-20" />
+        <Controls className="bg-background border shadow-sm rounded-md overflow-hidden" />
+        <MiniMap 
+          nodeColor="hsl(var(--primary))" 
+          maskColor="hsl(var(--background) / 0.5)" 
+          className="bg-background border shadow-sm rounded-md" 
+        />
       </ReactFlow>
     </div>
   );
