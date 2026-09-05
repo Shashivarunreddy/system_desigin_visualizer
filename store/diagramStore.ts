@@ -55,6 +55,11 @@ export const useDiagramStore = create<DiagramState>()(
           type: 'customEdge',
           markerEnd: { type: MarkerType.ArrowClosed },
           style: { strokeWidth: 2 },
+          data: {
+            direction: 'forward',
+            styleType: 'solid',
+            animated: false,
+          }
         };
         set({
           edges: addEdge(newEdge, get().edges),
@@ -77,7 +82,8 @@ export const useDiagramStore = create<DiagramState>()(
         set({
           edges: get().edges.map((edge) => {
             if (edge.id === edgeId) {
-              return { ...edge, ...data };
+              const newData = data.data ? { ...(edge.data as object), ...data.data } : edge.data;
+              return { ...edge, ...data, data: newData };
             }
             return edge;
           }),
