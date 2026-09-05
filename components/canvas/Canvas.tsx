@@ -29,7 +29,7 @@ import { SecurityNode } from '@/components/nodes/SecurityNode';
 import { ExternalNode } from '@/components/nodes/ExternalNode';
 import { CustomEdge } from '@/components/edges/CustomEdge';
 import { FloatingEdge } from '@/components/edges/FloatingEdge';
-import { COMPONENT_REGISTRY } from '@/data/components';
+import { getComponent } from '@/data/components';
 import { getConnectedSystem } from '@/lib/architecture/graph';
 
 const nodeTypes = {
@@ -124,7 +124,7 @@ function FlowCanvas() {
       const componentId = event.dataTransfer.getData('application/reactflow');
       if (!componentId) return;
 
-      const componentDef = COMPONENT_REGISTRY.find((c) => c.id === componentId);
+      const componentDef = getComponent(componentId);
       if (!componentDef) return;
 
       const position = screenToFlowPosition({

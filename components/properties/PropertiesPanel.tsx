@@ -167,8 +167,12 @@ export function PropertiesPanel() {
                   {tech.name}
                 </option>
               ))}
-              {/* Fallback to generic option */}
-              <option value={`generic-${nodeData.role}`}>Generic {nodeData.role}</option>
+              {/* If the current component is a generic one, ensure it has a valid option */}
+              {nodeData.componentId?.startsWith('generic-') && (
+                <option value={nodeData.componentId}>
+                  Generic {nodeData.role}
+                </option>
+              )}
             </select>
           </div>
         )}

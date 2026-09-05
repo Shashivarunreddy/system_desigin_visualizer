@@ -9,6 +9,9 @@ export type SystemNodeData = {
   description?: string;
   iconName: string;
   iconType?: IconType;
+  componentId?: string;
+  role: string;
+  technology?: string;
 };
 
 export function SystemNode({ data, selected }: NodeProps) {

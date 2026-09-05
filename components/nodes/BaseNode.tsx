@@ -1,7 +1,9 @@
 import React from 'react';
-import { Handle, Position, NodeProps, useConnection, NodeResizer } from '@xyflow/react';
+import { Handle, Position, NodeProps, useConnection, NodeResizer, NodeToolbar } from '@xyflow/react';
 import { cn } from '@/lib/utils';
-import { SystemNodeData } from './SystemNode'; // We will use the same data structure
+import { SystemNodeData } from './SystemNode';
+import { useDiagramStore } from '@/store/diagramStore';
+import { getTechnologiesForRole, getComponent } from '@/data/components';
 
 interface BaseNodeProps extends NodeProps {
   children: React.ReactNode;
@@ -13,11 +15,10 @@ interface BaseNodeProps extends NodeProps {
 export function BaseNode(props: BaseNodeProps) {
   const { id, data, selected, children, nodeTitle, nodeDescription, className, width, height } = props;
   const connection = useConnection();
+  const updateNodeData = useDiagramStore((state) => state.updateNodeData);
   const isTarget = connection.inProgress && connection.fromNode.id !== id;
+  const nodeData = data as unknown as SystemNodeData;
 
-  // React Flow provides `width` and `height` as measured pixels or resized pixels.
-  // By explicitly setting these on our inner container, the node scales perfectly.
-  // Before first measurement, they are undefined, so we fallback to the `className` default sizes.
   const containerStyle = {
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined,
@@ -25,6 +26,36 @@ export function BaseNode(props: BaseNodeProps) {
 
   return (
     <>
+      <NodeToolbar isVisible={selected} position={Position.Top} className="bg-background border rounded-md shadow-md p-1 mb-2 flex items-center">
+        <select
+          className="h-7 text-xs bg-transparent focus-visible:outline-none focus-visible:ring-0 cursor-pointer"
+          value={nodeData.componentId || ''}
+          onChange={(e) => {
+            const comp = getComponent(e.target.value);
+            if (comp) {
+              updateNodeData(id, {
+                componentId: comp.id,
+                iconName: comp.iconName,
+                iconType: comp.iconType,
+                technology: comp.technology,
+                label: comp.name
+              });
+            }
+          }}
+        >
+          <option value="" disabled>Select technology...</option>
+          {getTechnologiesForRole(nodeData.role).map(tech => (
+            <option key={tech.id} value={tech.id}>
+              {tech.name}
+            </option>
+          ))}
+          {nodeData.componentId?.startsWith('generic-') && (
+            <option value={nodeData.componentId}>
+              Generic {nodeData.role}
+            </option>
+          )}
+        </select>
+      </NodeToolbar>
       <NodeResizer 
         minWidth={60} 
         minHeight={60} 

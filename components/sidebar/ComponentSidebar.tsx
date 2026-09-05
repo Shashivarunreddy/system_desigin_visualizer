@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState, useMemo } from 'react';
-import { COMPONENT_REGISTRY, searchComponents, ComponentCategory } from '@/data/components';
+import { COMPONENT_REGISTRY, GENERIC_COMPONENTS } from '@/data/components';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
-import { Search } from 'lucide-react';
+import { Search, ChevronDown, ChevronRight } from 'lucide-react';
 
 export function ComponentSidebar() {
   const onDragStart = (event: React.DragEvent, componentId: string) => {
@@ -12,17 +12,36 @@ export function ComponentSidebar() {
   };
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
+
+  const toggleCategory = (category: string) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [category]: !prev[category]
+    }));
+  };
+
+  const allComponents = useMemo(() => {
+    return [...GENERIC_COMPONENTS, ...COMPONENT_REGISTRY];
+  }, []);
 
   const displayedComponents = useMemo(() => {
-    return searchComponents(searchQuery);
-  }, [searchQuery]);
+    if (!searchQuery) return allComponents;
+    const q = searchQuery.toLowerCase();
+    return allComponents.filter(c => 
+      c.name.toLowerCase().includes(q) ||
+      c.category.toLowerCase().includes(q) ||
+      c.technology?.toLowerCase().includes(q) ||
+      c.description?.toLowerCase().includes(q)
+    );
+  }, [searchQuery, allComponents]);
 
   const groupedComponents = useMemo(() => {
     return displayedComponents.reduce((acc, component) => {
       if (!acc[component.category]) acc[component.category] = [];
       acc[component.category].push(component);
       return acc;
-    }, {} as Record<ComponentCategory, typeof COMPONENT_REGISTRY>);
+    }, {} as Record<string, typeof allComponents>);
   }, [displayedComponents]);
 
   return (
@@ -40,39 +59,49 @@ export function ComponentSidebar() {
         </div>
       </div>
       
-      <div className="p-4 flex-1 overflow-y-auto flex flex-col gap-6">
+      <div className="p-4 flex-1 overflow-y-auto flex flex-col gap-4">
         {Object.entries(groupedComponents).length === 0 ? (
           <div className="text-center text-sm text-muted-foreground mt-4">
             No components found
           </div>
         ) : (
-          Object.entries(groupedComponents).map(([category, components]) => (
-            <div key={category} className="flex flex-col gap-3">
-              <div className="font-semibold text-xs text-muted-foreground uppercase tracking-wider sticky top-0 pb-1 z-10">
-                {category}
-              </div>
-              <div className="grid grid-cols-2 gap-2">
-                {components.map((component) => (
-                  <div
-                    key={component.id}
-                    className="flex flex-col items-center justify-center p-3 gap-2 bg-background border rounded-lg cursor-grab hover:border-primary/50 hover:bg-muted/50 transition-colors shadow-sm"
-                    draggable
-                    onDragStart={(e) => onDragStart(e, component.id)}
-                    title={component.description}
-                  >
-                    <DynamicIcon 
-                      iconName={component.iconName} 
-                      iconType={component.iconType || 'lucide'} 
-                      className={`w-6 h-6 ${component.iconType === 'si' ? '' : 'text-foreground'}`} 
-                    />
-                    <span className="text-[10px] text-center font-medium leading-tight">
-                      {component.name}
-                    </span>
+          Object.entries(groupedComponents).map(([category, components]) => {
+            const isExpanded = expandedCategories[category] || searchQuery.length > 0;
+            return (
+              <div key={category} className="flex flex-col gap-2">
+                <button 
+                  onClick={() => toggleCategory(category)}
+                  className="flex items-center justify-between w-full font-semibold text-xs text-muted-foreground uppercase tracking-wider sticky top-0 pb-1 z-10 hover:text-foreground transition-colors bg-muted/10 backdrop-blur-sm"
+                >
+                  <span>{category} ({components.length})</span>
+                  {isExpanded ? <ChevronDown className="w-3 h-3" /> : <ChevronRight className="w-3 h-3" />}
+                </button>
+                
+                {isExpanded && (
+                  <div className="grid grid-cols-2 gap-2">
+                    {components.map((component) => (
+                      <div
+                        key={component.id}
+                        className="flex flex-col items-center justify-center p-3 gap-2 bg-background border rounded-lg cursor-grab hover:border-primary/50 hover:bg-muted/50 transition-colors shadow-sm"
+                        draggable
+                        onDragStart={(e) => onDragStart(e, component.id)}
+                        title={component.description}
+                      >
+                        <DynamicIcon 
+                          iconName={component.iconName} 
+                          iconType={component.iconType || 'lucide'} 
+                          className={`w-6 h-6 ${component.iconType === 'si' ? '' : 'text-foreground'}`} 
+                        />
+                        <span className="text-[10px] text-center font-medium leading-tight">
+                          {component.name}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
-            </div>
-          ))
+            );
+          })
         )}
       </div>
     </div>
