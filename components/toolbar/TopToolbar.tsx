@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { useDiagramStore } from '@/store/diagramStore';
-import { Trash2, Download, Upload } from 'lucide-react';
+import { Trash2, Download, Upload, MousePointer2, GitCommitHorizontal } from 'lucide-react';
 import { Edge, Node } from '@xyflow/react';
 
 export function TopToolbar() {
@@ -12,6 +12,8 @@ export function TopToolbar() {
   const edges = useDiagramStore((state) => state.edges);
   const setNodes = useDiagramStore((state) => state.setNodes);
   const setEdges = useDiagramStore((state) => state.setEdges);
+  const activeTool = useDiagramStore((state) => state.activeTool);
+  const setActiveTool = useDiagramStore((state) => state.setActiveTool);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleExport = () => {

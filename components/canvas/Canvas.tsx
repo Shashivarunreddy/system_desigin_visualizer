@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef, useState, useEffect } from 'react';
 import {
   ReactFlow,
   Background,
@@ -9,6 +9,8 @@ import {
   ReactFlowProvider,
   useReactFlow,
   Node,
+  Edge,
+  MarkerType,
   ConnectionMode,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -26,6 +28,7 @@ import { NetworkNode } from '@/components/nodes/NetworkNode';
 import { SecurityNode } from '@/components/nodes/SecurityNode';
 import { ExternalNode } from '@/components/nodes/ExternalNode';
 import { CustomEdge } from '@/components/edges/CustomEdge';
+import { FloatingEdge } from '@/components/edges/FloatingEdge';
 import { COMPONENT_REGISTRY } from '@/data/components';
 import { getConnectedSystem } from '@/lib/architecture/graph';
 
@@ -45,6 +48,7 @@ const nodeTypes = {
 
 const edgeTypes = {
   customEdge: CustomEdge,
+  floatingEdge: FloatingEdge,
 };
 
 const getId = () => `node_${crypto.randomUUID()}`;
@@ -56,8 +60,11 @@ function FlowCanvas() {
   const onEdgesChange = useDiagramStore((state) => state.onEdgesChange);
   const onConnect = useDiagramStore((state) => state.onConnect);
   const setNodes = useDiagramStore((state) => state.setNodes);
+  const setEdges = useDiagramStore((state) => state.setEdges);
   const focusModeNodeId = useDiagramStore((state) => state.focusModeNodeId);
   
+  const [connectionSourceId, setConnectionSourceId] = useState<string | null>(null);
+
   const reactFlowWrapper = useRef<HTMLDivElement>(null);
   const { screenToFlowPosition } = useReactFlow();
 
@@ -146,6 +153,44 @@ function FlowCanvas() {
     [screenToFlowPosition, setNodes, nodes]
   );
 
+  const onNodeClick = useCallback((event: React.MouseEvent, node: Node) => {
+    if (!connectionSourceId) {
+      // First node clicked
+      setConnectionSourceId(node.id);
+    } else {
+      // Second node clicked
+      if (connectionSourceId !== node.id) {
+        // Check if edge already exists
+        const edgeExists = edges.some(
+          (e) => e.source === connectionSourceId && e.target === node.id
+        );
+
+        if (!edgeExists) {
+          const newEdge: Edge = {
+            id: `edge_${connectionSourceId}_${node.id}_${Date.now()}`,
+            source: connectionSourceId,
+            target: node.id,
+            type: 'floatingEdge',
+            markerEnd: { type: MarkerType.ArrowClosed },
+            style: { strokeWidth: 2 },
+            data: {
+              direction: 'forward',
+              styleType: 'solid',
+              animated: false,
+            }
+          };
+          setEdges([...edges, newEdge]);
+        }
+      }
+      // Reset after connecting or if clicking the same node again
+      setConnectionSourceId(null);
+    }
+  }, [connectionSourceId, edges, setEdges]);
+
+  const onPaneClick = useCallback(() => {
+    setConnectionSourceId(null);
+  }, []);
+
   return (
     <div className="flex-1 h-full w-full relative" ref={reactFlowWrapper}>
       <ReactFlow
@@ -154,6 +199,8 @@ function FlowCanvas() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        onNodeClick={onNodeClick}
+        onPaneClick={onPaneClick}
         onDrop={onDrop}
         onDragOver={onDragOver}
         nodeTypes={nodeTypes}
