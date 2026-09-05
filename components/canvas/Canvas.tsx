@@ -27,6 +27,7 @@ import { SecurityNode } from '@/components/nodes/SecurityNode';
 import { ExternalNode } from '@/components/nodes/ExternalNode';
 import { CustomEdge } from '@/components/edges/CustomEdge';
 import { COMPONENT_REGISTRY } from '@/data/components';
+import { getConnectedSystem } from '@/lib/architecture/graph';
 
 const nodeTypes = {
   systemNode: SystemNode,
@@ -55,6 +56,7 @@ function FlowCanvas() {
   const onEdgesChange = useDiagramStore((state) => state.onEdgesChange);
   const onConnect = useDiagramStore((state) => state.onConnect);
   const setNodes = useDiagramStore((state) => state.setNodes);
+  const focusModeNodeId = useDiagramStore((state) => state.focusModeNodeId);
   
   const reactFlowWrapper = useRef<HTMLDivElement>(null);
   const { screenToFlowPosition } = useReactFlow();
@@ -75,6 +77,33 @@ function FlowCanvas() {
       setNodes(nodes);
     }
   }, [nodes, storeNodes, setNodes]);
+
+  // Compute focus mode styles
+  const { displayNodes, displayEdges } = React.useMemo(() => {
+    if (!focusModeNodeId) {
+      return { displayNodes: nodes, displayEdges: edges };
+    }
+
+    const { nodes: connectedNodes, edges: connectedEdges } = getConnectedSystem(focusModeNodeId, nodes, edges);
+    
+    const highlightedNodes = nodes.map(n => ({
+      ...n,
+      style: {
+        ...n.style,
+        opacity: connectedNodes.has(n.id) ? 1 : 0.2,
+      }
+    }));
+
+    const highlightedEdges = edges.map(e => ({
+      ...e,
+      style: {
+        ...e.style,
+        opacity: connectedEdges.has(e.id) ? 1 : 0.1,
+      }
+    }));
+
+    return { displayNodes: highlightedNodes, displayEdges: highlightedEdges };
+  }, [nodes, edges, focusModeNodeId]);
 
   const onDragOver = useCallback((event: React.DragEvent) => {
     event.preventDefault();
@@ -103,8 +132,12 @@ function FlowCanvas() {
         data: { 
           label: componentDef.name,
           iconName: componentDef.iconName,
+          iconType: componentDef.iconType,
           description: componentDef.description,
           componentId: componentDef.id,
+          role: componentDef.role || 'service',
+          technology: componentDef.technology,
+          metadata: {},
         },
       };
 
@@ -116,8 +149,8 @@ function FlowCanvas() {
   return (
     <div className="flex-1 h-full w-full relative" ref={reactFlowWrapper}>
       <ReactFlow
-        nodes={nodes}
-        edges={edges}
+        nodes={displayNodes}
+        edges={displayEdges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}

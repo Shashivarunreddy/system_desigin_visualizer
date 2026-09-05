@@ -2,11 +2,10 @@ import React from 'react';
 import { NodeProps } from '@xyflow/react';
 import { BaseNode } from './BaseNode';
 import { SystemNodeData } from './SystemNode';
-import { getIconComponent } from '@/data/components';
+import { DynamicIcon } from '@/components/ui/DynamicIcon';
 
 export function ApiNode(props: NodeProps) {
   const nodeData = props.data as unknown as SystemNodeData;
-  const Icon = getIconComponent(nodeData.iconName);
 
   return (
     <BaseNode
@@ -20,11 +19,12 @@ export function ApiNode(props: NodeProps) {
         <div className="absolute left-0 w-3 h-full border-r-2 border-primary/30 rounded-l-full" />
         <div className="absolute right-0 w-3 h-full border-l-2 border-primary/30 rounded-r-full" />
         
-        <div className="text-primary font-bold z-10 flex items-center space-x-2">
-          <Icon className="w-5 h-5" strokeWidth={2} />
+        <div className="text-primary font-bold z-10 flex items-center justify-center space-x-2 w-full h-full p-2">
+          <DynamicIcon iconName={nodeData.iconName} iconType={nodeData.iconType || 'lucide'} className="w-[30%] h-[30%] max-w-[40px] max-h-[40px] min-w-[16px] min-h-[16px]" strokeWidth={2} />
           <span className="text-sm tracking-wider">API</span>
         </div>
       </div>
     </BaseNode>
   );
 }
+

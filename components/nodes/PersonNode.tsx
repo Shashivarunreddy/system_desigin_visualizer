@@ -2,11 +2,10 @@ import React from 'react';
 import { NodeProps } from '@xyflow/react';
 import { BaseNode } from './BaseNode';
 import { SystemNodeData } from './SystemNode';
-import { getIconComponent } from '@/data/components';
+import { DynamicIcon } from '@/components/ui/DynamicIcon';
 
 export function PersonNode(props: NodeProps) {
   const nodeData = props.data as unknown as SystemNodeData;
-  const Icon = getIconComponent(nodeData.iconName);
 
   return (
     <BaseNode
@@ -16,8 +15,10 @@ export function PersonNode(props: NodeProps) {
       className="w-16 h-16"
     >
       <div className="flex items-center justify-center w-full h-full text-primary">
-        <Icon className="w-12 h-12" strokeWidth={1.5} />
+        <DynamicIcon iconName={nodeData.iconName} iconType={nodeData.iconType || 'lucide'} className="w-12 h-12" strokeWidth={1.5} />
       </div>
     </BaseNode>
   );
 }
+
+

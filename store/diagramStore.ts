@@ -21,6 +21,7 @@ interface DiagramState {
   nodes: Node[];
   edges: Edge[];
   activeTool: Tool;
+  focusModeNodeId: string | null;
   onNodesChange: OnNodesChange;
   onEdgesChange: OnEdgesChange;
   onConnect: OnConnect;
@@ -28,8 +29,9 @@ interface DiagramState {
   setEdges: (edges: Edge[]) => void;
   setActiveTool: (tool: Tool) => void;
   updateNodeData: (nodeId: string, data: Partial<Record<string, unknown>>) => void;
-  updateEdgeData: (edgeId: string, data: Partial<Edge>) => void;
+  updateEdgeData: (edgeId: string, data: Partial<Record<string, unknown>>) => void;
   clearCanvas: () => void;
+  setFocusModeNodeId: (id: string | null) => void;
 }
 
 export const useDiagramStore = create<DiagramState>()(
@@ -38,6 +40,7 @@ export const useDiagramStore = create<DiagramState>()(
       nodes: [],
       edges: [],
       activeTool: 'select',
+      focusModeNodeId: null,
       onNodesChange: (changes: NodeChange[]) => {
         set({
           nodes: applyNodeChanges(changes, get().nodes),
@@ -89,7 +92,8 @@ export const useDiagramStore = create<DiagramState>()(
           }),
         });
       },
-      clearCanvas: () => set({ nodes: [], edges: [] }),
+      clearCanvas: () => set({ nodes: [], edges: [], focusModeNodeId: null }),
+      setFocusModeNodeId: (id) => set({ focusModeNodeId: id }),
     }),
     {
       name: 'system-design-editor-storage',

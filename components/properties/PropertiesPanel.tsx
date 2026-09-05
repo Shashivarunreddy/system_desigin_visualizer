@@ -3,7 +3,11 @@
 import React from 'react';
 import { useDiagramStore } from '@/store/diagramStore';
 import { useShallow } from 'zustand/react/shallow';
-import { Trash2 } from 'lucide-react';
+import { Trash2, AlertTriangle, Info, ShieldAlert, Activity, Network } from 'lucide-react';
+import { validateArchitecture } from '@/lib/architecture/validation';
+import { getArchitectureStatistics } from '@/lib/architecture/statistics';
+import { getIncomingConnections, getOutgoingConnections } from '@/lib/architecture/graph';
+import { getTechnologiesForRole, getComponent } from '@/data/components';
 
 export function PropertiesPanel() {
   const selectedNodes = useDiagramStore(useShallow((state) => state.nodes.filter((n) => n.selected)));
@@ -14,9 +18,56 @@ export function PropertiesPanel() {
   const setEdges = useDiagramStore((state) => state.setEdges);
   const nodes = useDiagramStore((state) => state.nodes);
   const edges = useDiagramStore((state) => state.edges);
+  const focusModeNodeId = useDiagramStore((state) => state.focusModeNodeId);
+  const setFocusModeNodeId = useDiagramStore((state) => state.setFocusModeNodeId);
 
   if (selectedNodes.length === 0 && selectedEdges.length === 0) {
-    return null;
+    const stats = getArchitectureStatistics(nodes, edges);
+    const warnings = validateArchitecture(nodes, edges);
+
+    return (
+      <div className="w-80 border-l bg-muted/10 h-full p-4 flex flex-col gap-6 overflow-y-auto border-t md:border-t-0">
+        <div className="flex items-center space-x-2">
+          <Activity className="w-5 h-5 text-primary" />
+          <h2 className="font-semibold uppercase tracking-wider text-muted-foreground text-sm">Architecture Health</h2>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4">
+          <div className="bg-background rounded-lg border p-3 flex flex-col">
+            <span className="text-2xl font-bold">{stats.componentCounts.total}</span>
+            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Components</span>
+          </div>
+          <div className="bg-background rounded-lg border p-3 flex flex-col">
+            <span className="text-2xl font-bold">{stats.relationshipCounts.total}</span>
+            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Connections</span>
+          </div>
+        </div>
+
+        {warnings.length > 0 ? (
+          <div className="space-y-3">
+            <h3 className="font-medium text-sm">Active Warnings</h3>
+            <div className="space-y-2">
+              {warnings.map(w => (
+                <div key={w.id} className={`p-3 text-xs rounded-md border flex items-start space-x-2 ${
+                  w.severity === 'error' ? 'bg-destructive/10 border-destructive/20 text-destructive' :
+                  w.severity === 'warning' ? 'bg-orange-500/10 border-orange-500/20 text-orange-600 dark:text-orange-400' :
+                  'bg-blue-500/10 border-blue-500/20 text-blue-600 dark:text-blue-400'
+                }`}>
+                  {w.severity === 'error' ? <ShieldAlert className="w-4 h-4 shrink-0" /> :
+                   w.severity === 'warning' ? <AlertTriangle className="w-4 h-4 shrink-0" /> :
+                   <Info className="w-4 h-4 shrink-0" />}
+                  <span>{w.message}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="p-4 bg-green-500/10 border border-green-500/20 text-green-700 dark:text-green-400 rounded-md text-sm flex items-center justify-center space-x-2">
+            <span className="font-medium">Architecture is healthy!</span>
+          </div>
+        )}
+      </div>
+    );
   }
 
   const handleDeleteNode = (id: string) => {
@@ -39,12 +90,20 @@ export function PropertiesPanel() {
 
   if (selectedNodes.length === 1) {
     const node = selectedNodes[0];
-    const nodeData = node.data as { label?: string; description?: string };
+    const nodeData = (node.data || {}) as Record<string, any>;
+    const metadata = nodeData.metadata || {};
+    const incomingCount = getIncomingConnections(node.id, edges).length;
+    const outgoingCount = getOutgoingConnections(node.id, edges).length;
+    const isFocused = focusModeNodeId === node.id;
+
+    const updateMetadata = (key: string, value: string) => {
+      updateNodeData(node.id, { metadata: { ...metadata, [key]: value } });
+    };
 
     return (
-      <div className="w-80 border-l bg-muted/10 h-full p-4 flex flex-col gap-4 overflow-y-auto border-t md:border-t-0">
-        <div className="flex items-center justify-between mb-2">
-          <div className="font-semibold text-sm uppercase tracking-wider text-muted-foreground">Node Properties</div>
+      <div className="w-80 border-l bg-muted/10 h-full p-4 flex flex-col gap-6 overflow-y-auto border-t md:border-t-0">
+        <div className="flex items-center justify-between">
+          <div className="font-semibold text-sm uppercase tracking-wider text-muted-foreground">Node Inspector</div>
           <button 
             onClick={() => handleDeleteNode(node.id)}
             className="p-1.5 text-muted-foreground hover:bg-destructive hover:text-destructive-foreground rounded-md transition-colors"
@@ -53,26 +112,114 @@ export function PropertiesPanel() {
             <Trash2 className="w-4 h-4" />
           </button>
         </div>
-        
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Label</label>
-          <input
-            type="text"
-            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-            value={nodeData.label || ''}
-            onChange={(e) => updateNodeData(node.id, { label: e.target.value })}
-            placeholder="e.g. API Gateway"
-          />
+
+        <div className="space-y-4">
+          <div className="flex justify-between items-center text-sm border-b pb-2">
+            <span className="text-muted-foreground">Semantic Role</span>
+            <span className="font-mono bg-muted px-2 py-0.5 rounded capitalize text-xs font-medium">{nodeData.role || 'Unknown'}</span>
+          </div>
+          
+          <div className="grid grid-cols-2 gap-2 text-center text-xs">
+            <div className="bg-background rounded-md border p-2">
+              <span className="block font-bold text-lg">{incomingCount}</span>
+              <span className="text-muted-foreground uppercase tracking-wider">Incoming</span>
+            </div>
+            <div className="bg-background rounded-md border p-2">
+              <span className="block font-bold text-lg">{outgoingCount}</span>
+              <span className="text-muted-foreground uppercase tracking-wider">Outgoing</span>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setFocusModeNodeId(isFocused ? null : node.id)}
+            className={`w-full py-2 flex items-center justify-center space-x-2 text-sm font-medium rounded-md border transition-colors ${
+              isFocused ? 'bg-primary text-primary-foreground border-primary' : 'bg-background hover:bg-muted'
+            }`}
+          >
+            <Network className="w-4 h-4" />
+            <span>{isFocused ? 'Exit Focus Mode' : 'Focus Connections'}</span>
+          </button>
         </div>
 
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Description</label>
-          <textarea
-            className="flex min-h-[80px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-y"
-            value={nodeData.description || ''}
-            onChange={(e) => updateNodeData(node.id, { description: e.target.value })}
-            placeholder="Add some details..."
-          />
+        {nodeData.role && (
+          <div className="space-y-2 pt-4 border-t">
+            <label className="text-sm font-medium">Technology Variant</label>
+            <select
+              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              value={nodeData.componentId || ''}
+              onChange={(e) => {
+                const comp = getComponent(e.target.value);
+                if (comp) {
+                  updateNodeData(node.id, {
+                    componentId: comp.id,
+                    iconName: comp.iconName,
+                    iconType: comp.iconType,
+                    technology: comp.technology,
+                    label: comp.name // auto-update label to match new tech
+                  });
+                }
+              }}
+            >
+              {/* Show the generic component as an option too if we want, but let's just show available technologies */}
+              <option value="" disabled>Select technology...</option>
+              {getTechnologiesForRole(nodeData.role).map(tech => (
+                <option key={tech.id} value={tech.id}>
+                  {tech.name}
+                </option>
+              ))}
+              {/* Fallback to generic option */}
+              <option value={`generic-${nodeData.role}`}>Generic {nodeData.role}</option>
+            </select>
+          </div>
+        )}
+        
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Label</label>
+            <input
+              type="text"
+              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              value={nodeData.label || ''}
+              onChange={(e) => updateNodeData(node.id, { label: e.target.value })}
+              placeholder="e.g. API Gateway"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Description</label>
+            <textarea
+              className="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring resize-y"
+              value={nodeData.description || ''}
+              onChange={(e) => updateNodeData(node.id, { description: e.target.value })}
+              placeholder="Add some details..."
+            />
+          </div>
+        </div>
+
+        <div className="space-y-4 pt-4 border-t">
+          <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Architecture Metadata</div>
+          
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Technology</label>
+            <input
+              type="text"
+              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              value={metadata.technology || ''}
+              onChange={(e) => updateMetadata('technology', e.target.value)}
+              placeholder="e.g. PostgreSQL, Node.js"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Environment</label>
+            <input
+              type="text"
+              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              value={metadata.environment || ''}
+              onChange={(e) => updateMetadata('environment', e.target.value)}
+              placeholder="e.g. Production, Staging"
+            />
+          </div>
         </div>
       </div>
     );
