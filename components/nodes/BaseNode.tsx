@@ -57,8 +57,8 @@ export function BaseNode(props: BaseNodeProps) {
         </select>
       </NodeToolbar>
       <NodeResizer 
-        minWidth={60} 
-        minHeight={60} 
+        minWidth={30} 
+        minHeight={30} 
         isVisible={selected} 
         lineClassName="border-transparent" 
         lineStyle={{ border: 'none' }}
@@ -120,11 +120,6 @@ export function BaseNode(props: BaseNodeProps) {
           <div className="text-xs font-semibold text-foreground px-2 py-0.5 bg-background/80 backdrop-blur-sm rounded border shadow-sm">
             {nodeTitle}
           </div>
-          {nodeDescription && (
-            <div className="text-[10px] text-muted-foreground mt-0.5 line-clamp-2 leading-tight">
-              {nodeDescription}
-            </div>
-          )}
         </div>
       </div>
     </>

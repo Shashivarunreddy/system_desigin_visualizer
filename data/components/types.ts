@@ -8,7 +8,23 @@ export type ComponentCategory =
   | 'Communication'
   | 'Networking'
   | 'Security'
-  | 'External';
+  | 'External'
+  | 'AI / ML'
+  | 'Data Processing'
+  | 'Analytics & Data Platforms'
+  | 'Workflow & Orchestration'
+  | 'Integration'
+  | 'Notifications'
+  | 'Observability'
+  | 'Reliability & Resilience'
+  | 'Deployment & Environments'
+  | 'Containers & Orchestration'
+  | 'Distributed Systems'
+  | 'Devices & IoT'
+  | 'Legacy & Migration'
+  | 'CI/CD & Software Delivery'
+  | 'Configuration'
+  | 'Diagram & Documentation';
 
 export type VisualType = 
   | 'person'

@@ -4,13 +4,15 @@ import { MESSAGING_COMPONENTS } from './catalogs/messaging';
 import { COMPUTE_COMPONENTS } from './catalogs/compute';
 import { APPLICATION_COMPONENTS } from './catalogs/applications';
 import { OTHER_COMPONENTS } from './catalogs/others';
+import { EXTENDED_COMPONENTS } from './catalogs/extended';
 
 export const COMPONENT_REGISTRY: SystemComponent[] = [
   ...DATABASE_COMPONENTS,
   ...MESSAGING_COMPONENTS,
   ...COMPUTE_COMPONENTS,
   ...APPLICATION_COMPONENTS,
-  ...OTHER_COMPONENTS
+  ...OTHER_COMPONENTS,
+  ...EXTENDED_COMPONENTS
 ];
 
 export const GENERIC_COMPONENTS: SystemComponent[] = [
@@ -117,7 +119,6 @@ export function searchComponents(query: string): SystemComponent[] {
   return COMPONENT_REGISTRY.filter(c => 
     c.name.toLowerCase().includes(q) ||
     c.category.toLowerCase().includes(q) ||
-    c.technology?.toLowerCase().includes(q) ||
     c.tags?.some(t => t.toLowerCase().includes(q)) ||
     c.description?.toLowerCase().includes(q)
   );
