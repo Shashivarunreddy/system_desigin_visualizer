@@ -2,6 +2,7 @@ import { TopToolbar } from '@/components/toolbar/TopToolbar';
 import { ComponentSidebar } from '@/components/sidebar/ComponentSidebar';
 import { PropertiesPanel } from "@/components/properties/PropertiesPanel";
 import { Canvas } from '@/components/canvas/Canvas';
+import { CommandPalette } from '@/components/sidebar/CommandPalette';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Canvas />
         <PropertiesPanel />
       </div>
+      <CommandPalette />
     </div>
   );
 }

@@ -61,6 +61,7 @@ function FlowCanvas() {
   const setNodes = useDiagramStore((state) => state.setNodes);
   const setEdges = useDiagramStore((state) => state.setEdges);
   const focusModeNodeId = useDiagramStore((state) => state.focusModeNodeId);
+  const addRecentComponent = useDiagramStore((state) => state.addRecentComponent);
   
   const [connectionSourceId, setConnectionSourceId] = useState<string | null>(null);
 
@@ -148,8 +149,9 @@ function FlowCanvas() {
       };
 
       setNodes([...nodes, newNode]);
+      addRecentComponent(componentDef.id);
     },
-    [screenToFlowPosition, setNodes, nodes]
+    [screenToFlowPosition, setNodes, nodes, addRecentComponent]
   );
 
   const onNodeClick = useCallback((event: React.MouseEvent, node: Node) => {

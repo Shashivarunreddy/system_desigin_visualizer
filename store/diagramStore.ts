@@ -32,6 +32,10 @@ interface DiagramState {
   updateEdgeData: (edgeId: string, data: Partial<Record<string, unknown>>) => void;
   clearCanvas: () => void;
   setFocusModeNodeId: (id: string | null) => void;
+  recentComponents: string[];
+  favoriteComponents: string[];
+  addRecentComponent: (id: string) => void;
+  toggleFavoriteComponent: (id: string) => void;
 }
 
 export const useDiagramStore = create<DiagramState>()(
@@ -39,8 +43,26 @@ export const useDiagramStore = create<DiagramState>()(
     (set, get) => ({
       nodes: [],
       edges: [],
+      recentComponents: [],
+      favoriteComponents: [],
       activeTool: 'select',
       focusModeNodeId: null,
+      addRecentComponent: (id: string) => {
+        set((state) => {
+          const filtered = state.recentComponents.filter(c => c !== id);
+          return { recentComponents: [id, ...filtered].slice(0, 20) };
+        });
+      },
+      toggleFavoriteComponent: (id: string) => {
+        set((state) => {
+          const isFav = state.favoriteComponents.includes(id);
+          if (isFav) {
+            return { favoriteComponents: state.favoriteComponents.filter(c => c !== id) };
+          } else {
+            return { favoriteComponents: [...state.favoriteComponents, id] };
+          }
+        });
+      },
       onNodesChange: (changes: NodeChange[]) => {
         set({
           nodes: applyNodeChanges(changes, get().nodes),
@@ -97,7 +119,12 @@ export const useDiagramStore = create<DiagramState>()(
     }),
     {
       name: 'system-design-editor-storage',
-      partialize: (state) => ({ nodes: state.nodes, edges: state.edges }),
+      partialize: (state) => ({ 
+        nodes: state.nodes, 
+        edges: state.edges,
+        recentComponents: state.recentComponents,
+        favoriteComponents: state.favoriteComponents
+      }),
     }
   )
 );

@@ -28,7 +28,7 @@ export function BaseNode(props: BaseNodeProps) {
     <>
       <NodeToolbar isVisible={selected} position={Position.Top} className="bg-background border rounded-md shadow-md p-1 mb-2 flex items-center">
         <select
-          className="h-7 text-xs bg-transparent focus-visible:outline-none focus-visible:ring-0 cursor-pointer"
+          className="h-7 text-xs bg-background text-foreground rounded focus-visible:outline-none focus-visible:ring-0 cursor-pointer"
           value={nodeData.componentId || ''}
           onChange={(e) => {
             const comp = getComponent(e.target.value);

@@ -93,7 +93,7 @@ export function PropertiesPanel() {
           <div className="space-y-2 pt-4 border-t">
             <label className="text-sm font-medium">Technology Variant</label>
             <select
-              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              className="flex h-9 w-full rounded-md border border-input bg-background text-foreground px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               value={nodeData.componentId || ''}
               onChange={(e) => {
                 const comp = getComponent(e.target.value);
@@ -130,7 +130,7 @@ export function PropertiesPanel() {
             <label className="text-sm font-medium">Label</label>
             <input
               type="text"
-              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              className="flex h-9 w-full rounded-md border border-input bg-background text-foreground px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               value={nodeData.label || ''}
               onChange={(e) => updateNodeData(node.id, { label: e.target.value })}
               placeholder="e.g. API Gateway"
@@ -140,7 +140,7 @@ export function PropertiesPanel() {
           <div className="space-y-2">
             <label className="text-sm font-medium">Description</label>
             <textarea
-              className="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring resize-y"
+              className="flex min-h-[60px] w-full rounded-md border border-input bg-background text-foreground px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring resize-y"
               value={nodeData.description || ''}
               onChange={(e) => updateNodeData(node.id, { description: e.target.value })}
               placeholder="Add some details..."
@@ -197,7 +197,7 @@ export function PropertiesPanel() {
         <div className="space-y-2">
           <label className="text-sm font-medium">Relationship</label>
           <select
-            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            className="flex h-9 w-full rounded-md border border-input bg-background text-foreground px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             value={edgeData.relationship || ''}
             onChange={handleRelationshipChange}
           >
@@ -214,7 +214,7 @@ export function PropertiesPanel() {
           <label className="text-sm font-medium">Label</label>
           <input
             type="text"
-            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            className="flex h-9 w-full rounded-md border border-input bg-background text-foreground px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             value={edge.label as string || ''}
             onChange={(e) => updateEdgeData(edge.id, { label: e.target.value })}
             placeholder="e.g. calls, writes, reads"
@@ -224,7 +224,7 @@ export function PropertiesPanel() {
         <div className="space-y-2">
           <label className="text-sm font-medium">Direction</label>
           <select
-            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            className="flex h-9 w-full rounded-md border border-input bg-background text-foreground px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             value={edgeData.direction || 'forward'}
             onChange={(e) => updateEdgeData(edge.id, { data: { direction: e.target.value } })}
           >
@@ -237,7 +237,7 @@ export function PropertiesPanel() {
         <div className="space-y-2">
           <label className="text-sm font-medium">Style</label>
           <select
-            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            className="flex h-9 w-full rounded-md border border-input bg-background text-foreground px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             value={edgeData.styleType || 'solid'}
             onChange={(e) => updateEdgeData(edge.id, { data: { styleType: e.target.value } })}
           >
