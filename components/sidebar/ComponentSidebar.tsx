@@ -5,6 +5,38 @@ import { COMPONENT_REGISTRY, GENERIC_COMPONENTS } from '@/data/components';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 import { Search, ChevronDown, ChevronRight, Star } from 'lucide-react';
 import { useDiagramStore } from '@/store/diagramStore';
+import { useDebounce } from '@/hooks/useDebounce';
+
+const SidebarItem = React.memo(({ component, isFav, onDragStart, toggleFavoriteComponent }: { component: any, isFav: boolean, onDragStart: any, toggleFavoriteComponent: any }) => {
+  if (!component) return null;
+  return (
+    <div
+      className="relative group flex flex-col items-center justify-center p-3 gap-2 bg-background border rounded-lg cursor-grab hover:border-primary/50 hover:bg-muted/50 transition-colors shadow-sm"
+      draggable
+      onDragStart={(e) => onDragStart(e, component.id)}
+      title={component.description}
+    >
+      <button 
+        className={`absolute top-1 right-1 p-1 z-10 transition-opacity ${isFav ? 'opacity-100 text-yellow-500' : 'opacity-0 group-hover:opacity-100 text-muted-foreground hover:text-yellow-500'}`}
+        onClick={(e) => {
+          e.stopPropagation();
+          toggleFavoriteComponent(component.id);
+        }}
+        title={isFav ? "Remove from favorites" : "Add to favorites"}
+      >
+        <Star className={`w-3 h-3 ${isFav ? 'fill-yellow-500 text-yellow-500' : ''}`} />
+      </button>
+      <DynamicIcon 
+        iconName={component.iconName} 
+        iconType={component.iconType || 'lucide'} 
+        className={`w-6 h-6 ${component.iconType === 'si' ? '' : 'text-foreground'}`} 
+      />
+      <span className="text-[10px] text-center font-medium leading-tight">
+        {component.name}
+      </span>
+    </div>
+  );
+});
 
 export function ComponentSidebar() {
   const recentComponentIds = useDiagramStore(state => state.recentComponents);
@@ -17,6 +49,7 @@ export function ComponentSidebar() {
   };
 
   const [searchQuery, setSearchQuery] = useState('');
+  const debouncedSearchQuery = useDebounce(searchQuery, 200);
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
   const [isBrowsingAll, setIsBrowsingAll] = useState(false);
 
@@ -32,15 +65,15 @@ export function ComponentSidebar() {
   }, []);
 
   const searchResults = useMemo(() => {
-    if (!searchQuery) return [];
-    const q = searchQuery.toLowerCase();
+    if (!debouncedSearchQuery) return [];
+    const q = debouncedSearchQuery.toLowerCase();
     return allComponents.filter(c => 
       c.name.toLowerCase().includes(q) ||
       c.category.toLowerCase().includes(q) ||
       c.technology?.toLowerCase().includes(q) ||
       c.description?.toLowerCase().includes(q)
     );
-  }, [searchQuery, allComponents]);
+  }, [debouncedSearchQuery, allComponents]);
 
   const groupedSearchResults = useMemo(() => {
     return searchResults.reduce((acc, component) => {
@@ -70,32 +103,13 @@ export function ComponentSidebar() {
     if (!component) return null;
     const isFav = favoriteComponentIds.includes(component.id);
     return (
-      <div
-        key={component.id}
-        className="relative group flex flex-col items-center justify-center p-3 gap-2 bg-background border rounded-lg cursor-grab hover:border-primary/50 hover:bg-muted/50 transition-colors shadow-sm"
-        draggable
-        onDragStart={(e) => onDragStart(e, component.id)}
-        title={component.description}
-      >
-        <button 
-          className={`absolute top-1 right-1 p-1 z-10 transition-opacity ${isFav ? 'opacity-100 text-yellow-500' : 'opacity-0 group-hover:opacity-100 text-muted-foreground hover:text-yellow-500'}`}
-          onClick={(e) => {
-            e.stopPropagation();
-            toggleFavoriteComponent(component.id);
-          }}
-          title={isFav ? "Remove from favorites" : "Add to favorites"}
-        >
-          <Star className={`w-3 h-3 ${isFav ? 'fill-yellow-500 text-yellow-500' : ''}`} />
-        </button>
-        <DynamicIcon 
-          iconName={component.iconName} 
-          iconType={component.iconType || 'lucide'} 
-          className={`w-6 h-6 ${component.iconType === 'si' ? '' : 'text-foreground'}`} 
-        />
-        <span className="text-[10px] text-center font-medium leading-tight">
-          {component.name}
-        </span>
-      </div>
+      <SidebarItem 
+        key={component.id} 
+        component={component} 
+        isFav={isFav} 
+        onDragStart={onDragStart} 
+        toggleFavoriteComponent={toggleFavoriteComponent} 
+      />
     );
   };
 
@@ -137,10 +151,10 @@ export function ComponentSidebar() {
       </div>
       
       <div className="p-4 flex-1 overflow-y-auto flex flex-col gap-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-        {searchQuery ? (
+        {debouncedSearchQuery ? (
           Object.entries(groupedSearchResults).length === 0 ? (
             <div className="text-center text-sm text-muted-foreground mt-4">
-              No components found for "{searchQuery}"
+              No components found for "{debouncedSearchQuery}"
             </div>
           ) : (
             Object.entries(groupedSearchResults).map(([category, components]) => renderComponentList(category, components, false))

@@ -4,7 +4,7 @@ import { BaseNode } from './BaseNode';
 import { SystemNodeData } from './SystemNode';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 
-export function QueueNode(props: NodeProps) {
+export const QueueNode = React.memo(function QueueNode(props: NodeProps) {
   const nodeData = props.data as unknown as SystemNodeData;
 
   return (
@@ -32,4 +32,5 @@ export function QueueNode(props: NodeProps) {
       </div>
     </BaseNode>
   );
-}
+});
+

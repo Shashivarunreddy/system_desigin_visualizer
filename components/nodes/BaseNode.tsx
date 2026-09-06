@@ -12,7 +12,7 @@ interface BaseNodeProps extends NodeProps {
   className?: string;
 }
 
-export function BaseNode(props: BaseNodeProps) {
+export const BaseNode = React.memo(function BaseNode(props: BaseNodeProps) {
   const { id, data, selected, children, nodeTitle, nodeDescription, className, width, height } = props;
   const connection = useConnection();
   const updateNodeData = useDiagramStore((state) => state.updateNodeData);
@@ -124,4 +124,5 @@ export function BaseNode(props: BaseNodeProps) {
       </div>
     </>
   );
-}
+});
+

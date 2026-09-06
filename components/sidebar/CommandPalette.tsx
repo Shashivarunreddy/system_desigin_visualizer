@@ -6,10 +6,12 @@ import { COMPONENT_REGISTRY, GENERIC_COMPONENTS } from '@/data/components';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 import { useDiagramStore } from '@/store/diagramStore';
 import { getComponent } from '@/data/components';
+import { useDebounce } from '@/hooks/useDebounce';
 
 export function CommandPalette() {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const debouncedSearchQuery = useDebounce(searchQuery, 150);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -43,15 +45,15 @@ export function CommandPalette() {
   }, []);
 
   const searchResults = useMemo(() => {
-    if (!searchQuery) return [];
-    const q = searchQuery.toLowerCase();
+    if (!debouncedSearchQuery) return [];
+    const q = debouncedSearchQuery.toLowerCase();
     return allComponents.filter(c => 
       c.name.toLowerCase().includes(q) ||
       c.category.toLowerCase().includes(q) ||
       c.technology?.toLowerCase().includes(q) ||
       c.description?.toLowerCase().includes(q)
     ).slice(0, 10); // limit to top 10 results for palette
-  }, [searchQuery, allComponents]);
+  }, [debouncedSearchQuery, allComponents]);
 
   // Handle keyboard navigation
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -136,7 +138,7 @@ export function CommandPalette() {
           <div className="text-xs text-muted-foreground border rounded px-1.5 py-0.5 bg-muted">ESC</div>
         </div>
 
-        {searchQuery && searchResults.length > 0 && (
+        {debouncedSearchQuery && searchResults.length > 0 && (
           <div className="max-h-80 overflow-y-auto p-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {searchResults.map((component, index) => (
               <button
@@ -167,9 +169,9 @@ export function CommandPalette() {
           </div>
         )}
 
-        {searchQuery && searchResults.length === 0 && (
+        {debouncedSearchQuery && searchResults.length === 0 && (
           <div className="p-8 text-center text-sm text-muted-foreground">
-            No components found for "{searchQuery}"
+            No components found for "{debouncedSearchQuery}"
           </div>
         )}
       </div>

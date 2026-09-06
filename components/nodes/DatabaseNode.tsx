@@ -4,7 +4,7 @@ import { BaseNode } from './BaseNode';
 import { SystemNodeData } from './SystemNode';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 
-export function DatabaseNode(props: NodeProps) {
+export const DatabaseNode = React.memo(function DatabaseNode(props: NodeProps) {
   const nodeData = props.data as unknown as SystemNodeData;
 
   return (
@@ -27,5 +27,6 @@ export function DatabaseNode(props: NodeProps) {
       </div>
     </BaseNode>
   );
-}
+});
+
 

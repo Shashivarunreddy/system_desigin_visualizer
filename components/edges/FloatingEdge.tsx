@@ -40,6 +40,7 @@ export function FloatingEdge({
   );
 
   const edgeData = (data || {}) as CustomEdgeData;
+  const direction = edgeData.direction || 'forward';
   const styleType = edgeData.styleType || 'solid';
   const animated = edgeData.animated || false;
 
@@ -60,6 +61,23 @@ export function FloatingEdge({
     strokeDasharray = '2,4';
   }
 
+  // Override markers based on direction
+  let finalMarkerStart = markerStart;
+  let finalMarkerEnd = markerEnd;
+
+  if (direction === 'forward') {
+    finalMarkerStart = undefined;
+    finalMarkerEnd = markerEnd;
+  } else if (direction === 'backward') {
+    // If markerEnd is an object (like {type: 'arrowclosed'}), we can reuse it
+    // React Flow handles orient auto-start-reverse internally for markerStart
+    finalMarkerStart = markerEnd;
+    finalMarkerEnd = undefined;
+  } else if (direction === 'bidirectional') {
+    finalMarkerStart = markerEnd;
+    finalMarkerEnd = markerEnd;
+  }
+
   const mergedStyle = {
     ...style,
     strokeDasharray,
@@ -69,8 +87,8 @@ export function FloatingEdge({
     <>
       <BaseEdge
         path={edgePath}
-        markerEnd={markerEnd}
-        markerStart={markerStart}
+        markerEnd={finalMarkerEnd}
+        markerStart={finalMarkerStart}
         style={mergedStyle}
       />
       {label && (

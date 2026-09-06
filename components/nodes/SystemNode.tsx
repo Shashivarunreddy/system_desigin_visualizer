@@ -14,7 +14,7 @@ export type SystemNodeData = {
   technology?: string;
 };
 
-export function SystemNode(props: NodeProps) {
+export const SystemNode = React.memo(function SystemNode(props: NodeProps) {
   const nodeData = props.data as unknown as SystemNodeData;
 
   return (
@@ -33,4 +33,5 @@ export function SystemNode(props: NodeProps) {
       </div>
     </BaseNode>
   );
-}
+});
+

@@ -1,6 +1,6 @@
 import React from 'react';
-import * as LucideIcons from 'lucide-react';
-import * as SimpleIcons from 'react-icons/si';
+import { LucideIconMap, SimpleIconMap } from './IconMap';
+import { Box } from 'lucide-react';
 import { IconType } from '@/data/components/types';
 
 interface DynamicIconProps extends React.SVGProps<SVGSVGElement> {
@@ -10,21 +10,20 @@ interface DynamicIconProps extends React.SVGProps<SVGSVGElement> {
   strokeWidth?: number;
 }
 
-export function DynamicIcon({ iconName, iconType, className, strokeWidth = 2, ...props }: DynamicIconProps) {
+export const DynamicIcon = React.memo(function DynamicIcon({ iconName, iconType, className, strokeWidth = 2, ...props }: DynamicIconProps) {
   if (iconType === 'si') {
-    const SiIcon = (SimpleIcons as any)[iconName];
+    const SiIcon = SimpleIconMap[iconName];
     if (SiIcon) {
       return <SiIcon className={className} {...props} />;
     }
   }
 
   // Fallback to Lucide
-  const LucideIcon = (LucideIcons as any)[iconName];
+  const LucideIcon = LucideIconMap[iconName];
   if (LucideIcon) {
     return <LucideIcon className={className} strokeWidth={strokeWidth} {...props} />;
   }
 
   // Final fallback
-  const FallbackIcon = LucideIcons.Box;
-  return <FallbackIcon className={className} strokeWidth={strokeWidth} {...props} />;
-}
+  return <Box className={className} strokeWidth={strokeWidth} {...props} />;
+});

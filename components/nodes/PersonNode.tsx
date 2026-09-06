@@ -4,7 +4,7 @@ import { BaseNode } from './BaseNode';
 import { SystemNodeData } from './SystemNode';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 
-export function PersonNode(props: NodeProps) {
+export const PersonNode = React.memo(function PersonNode(props: NodeProps) {
   const nodeData = props.data as unknown as SystemNodeData;
 
   return (
@@ -19,6 +19,7 @@ export function PersonNode(props: NodeProps) {
       </div>
     </BaseNode>
   );
-}
+});
+
 
 

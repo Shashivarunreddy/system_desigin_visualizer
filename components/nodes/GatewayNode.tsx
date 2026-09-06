@@ -4,7 +4,7 @@ import { BaseNode } from './BaseNode';
 import { SystemNodeData } from './SystemNode';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 
-export function GatewayNode(props: NodeProps) {
+export const GatewayNode = React.memo(function GatewayNode(props: NodeProps) {
   const nodeData = props.data as unknown as SystemNodeData;
 
   return (
@@ -22,4 +22,5 @@ export function GatewayNode(props: NodeProps) {
       </div>
     </BaseNode>
   );
-}
+});
+
