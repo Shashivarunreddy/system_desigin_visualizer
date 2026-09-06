@@ -51,7 +51,6 @@ export function ComponentSidebar() {
   const [searchQuery, setSearchQuery] = useState('');
   const debouncedSearchQuery = useDebounce(searchQuery, 200);
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
-  const [isBrowsingAll, setIsBrowsingAll] = useState(false);
 
   const toggleCategory = (category: string) => {
     setExpandedCategories(prev => ({
@@ -82,14 +81,6 @@ export function ComponentSidebar() {
       return acc;
     }, {} as Record<string, typeof allComponents>);
   }, [searchResults]);
-
-  const groupedAllComponents = useMemo(() => {
-    return allComponents.reduce((acc, component) => {
-      if (!acc[component.category]) acc[component.category] = [];
-      acc[component.category].push(component);
-      return acc;
-    }, {} as Record<string, typeof allComponents>);
-  }, [allComponents]);
 
   const recentComponents = useMemo(() => 
     recentComponentIds.map(id => allComponents.find(c => c.id === id)).filter(Boolean), 
@@ -159,27 +150,11 @@ export function ComponentSidebar() {
           ) : (
             Object.entries(groupedSearchResults).map(([category, components]) => renderComponentList(category, components, false))
           )
-        ) : isBrowsingAll ? (
-          <>
-            <button 
-              onClick={() => setIsBrowsingAll(false)}
-              className="text-xs text-primary font-medium hover:underline mb-4 flex items-center gap-1"
-            >
-              <ChevronDown className="w-3 h-3 rotate-90" /> Back to default view
-            </button>
-            {Object.entries(groupedAllComponents).map(([category, components]) => renderComponentList(category, components, true))}
-          </>
         ) : (
           <>
             {favoriteComponents.length > 0 && renderComponentList('Favorites', favoriteComponents, false)}
             {recentComponents.length > 0 && renderComponentList('Recent', recentComponents, false)}
             {renderComponentList('Most Used', GENERIC_COMPONENTS, false)}
-            <button 
-              onClick={() => setIsBrowsingAll(true)}
-              className="mt-2 w-full py-2 text-sm font-medium text-primary bg-primary/10 hover:bg-primary/20 rounded-md transition-colors"
-            >
-              + Browse All
-            </button>
           </>
         )}
       </div>
