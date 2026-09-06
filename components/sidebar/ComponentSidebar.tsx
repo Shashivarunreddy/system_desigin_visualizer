@@ -59,7 +59,7 @@ export function ComponentSidebar() {
         </div>
       </div>
       
-      <div className="p-4 flex-1 overflow-y-auto flex flex-col gap-4">
+      <div className="p-4 flex-1 overflow-y-auto flex flex-col gap-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {Object.entries(groupedComponents).length === 0 ? (
           <div className="text-center text-sm text-muted-foreground mt-4">
             No components found

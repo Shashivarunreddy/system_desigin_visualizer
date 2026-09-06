@@ -128,3 +128,14 @@
     @apply font-sans;
   }
 }
+
+.dark .react-flow__controls-button {
+  background-color: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+.dark .react-flow__controls-button svg {
+  fill: var(--foreground);
+}
+.dark .react-flow__controls-button:hover {
+  background-color: var(--muted);
+}

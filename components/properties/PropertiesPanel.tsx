@@ -3,9 +3,7 @@
 import React from 'react';
 import { useDiagramStore } from '@/store/diagramStore';
 import { useShallow } from 'zustand/react/shallow';
-import { Trash2, AlertTriangle, Info, ShieldAlert, Activity, Network } from 'lucide-react';
-import { validateArchitecture } from '@/lib/architecture/validation';
-import { getArchitectureStatistics } from '@/lib/architecture/statistics';
+import { Trash2, Network } from 'lucide-react';
 import { getIncomingConnections, getOutgoingConnections } from '@/lib/architecture/graph';
 import { getTechnologiesForRole, getComponent } from '@/data/components';
 
@@ -22,52 +20,7 @@ export function PropertiesPanel() {
   const setFocusModeNodeId = useDiagramStore((state) => state.setFocusModeNodeId);
 
   if (selectedNodes.length === 0 && selectedEdges.length === 0) {
-    const stats = getArchitectureStatistics(nodes, edges);
-    const warnings = validateArchitecture(nodes, edges);
-
-    return (
-      <div className="w-80 border-l bg-muted/10 h-full p-4 flex flex-col gap-6 overflow-y-auto border-t md:border-t-0">
-        <div className="flex items-center space-x-2">
-          <Activity className="w-5 h-5 text-primary" />
-          <h2 className="font-semibold uppercase tracking-wider text-muted-foreground text-sm">Architecture Health</h2>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-background rounded-lg border p-3 flex flex-col">
-            <span className="text-2xl font-bold">{stats.componentCounts.total}</span>
-            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Components</span>
-          </div>
-          <div className="bg-background rounded-lg border p-3 flex flex-col">
-            <span className="text-2xl font-bold">{stats.relationshipCounts.total}</span>
-            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Connections</span>
-          </div>
-        </div>
-
-        {warnings.length > 0 ? (
-          <div className="space-y-3">
-            <h3 className="font-medium text-sm">Active Warnings</h3>
-            <div className="space-y-2">
-              {warnings.map(w => (
-                <div key={w.id} className={`p-3 text-xs rounded-md border flex items-start space-x-2 ${
-                  w.severity === 'error' ? 'bg-destructive/10 border-destructive/20 text-destructive' :
-                  w.severity === 'warning' ? 'bg-orange-500/10 border-orange-500/20 text-orange-600 dark:text-orange-400' :
-                  'bg-blue-500/10 border-blue-500/20 text-blue-600 dark:text-blue-400'
-                }`}>
-                  {w.severity === 'error' ? <ShieldAlert className="w-4 h-4 shrink-0" /> :
-                   w.severity === 'warning' ? <AlertTriangle className="w-4 h-4 shrink-0" /> :
-                   <Info className="w-4 h-4 shrink-0" />}
-                  <span>{w.message}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <div className="p-4 bg-green-500/10 border border-green-500/20 text-green-700 dark:text-green-400 rounded-md text-sm flex items-center justify-center space-x-2">
-            <span className="font-medium">Architecture is healthy!</span>
-          </div>
-        )}
-      </div>
-    );
+    return null;
   }
 
   const handleDeleteNode = (id: string) => {
@@ -91,14 +44,9 @@ export function PropertiesPanel() {
   if (selectedNodes.length === 1) {
     const node = selectedNodes[0];
     const nodeData = (node.data || {}) as Record<string, any>;
-    const metadata = nodeData.metadata || {};
     const incomingCount = getIncomingConnections(node.id, edges).length;
     const outgoingCount = getOutgoingConnections(node.id, edges).length;
     const isFocused = focusModeNodeId === node.id;
-
-    const updateMetadata = (key: string, value: string) => {
-      updateNodeData(node.id, { metadata: { ...metadata, [key]: value } });
-    };
 
     return (
       <div className="w-80 border-l bg-muted/10 h-full p-4 flex flex-col gap-6 overflow-y-auto border-t md:border-t-0">
@@ -200,31 +148,6 @@ export function PropertiesPanel() {
           </div>
         </div>
 
-        <div className="space-y-4 pt-4 border-t">
-          <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Architecture Metadata</div>
-          
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Technology</label>
-            <input
-              type="text"
-              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              value={metadata.technology || ''}
-              onChange={(e) => updateMetadata('technology', e.target.value)}
-              placeholder="e.g. PostgreSQL, Node.js"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Environment</label>
-            <input
-              type="text"
-              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              value={metadata.environment || ''}
-              onChange={(e) => updateMetadata('environment', e.target.value)}
-              placeholder="e.g. Production, Staging"
-            />
-          </div>
-        </div>
       </div>
     );
   }

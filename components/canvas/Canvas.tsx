@@ -5,7 +5,6 @@ import {
   ReactFlow,
   Background,
   Controls,
-  MiniMap,
   ReactFlowProvider,
   useReactFlow,
   Node,
@@ -206,16 +205,12 @@ function FlowCanvas() {
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
         connectionMode={ConnectionMode.Loose}
+        proOptions={{ hideAttribution: true }}
         fitView
         className="bg-muted/10"
       >
         <Background color="hsl(var(--muted-foreground))" gap={16} size={1} className="opacity-20" />
         <Controls className="bg-background border shadow-sm rounded-md overflow-hidden" />
-        <MiniMap 
-          nodeColor="hsl(var(--primary))" 
-          maskColor="hsl(var(--background) / 0.5)" 
-          className="bg-background border shadow-sm rounded-md" 
-        />
       </ReactFlow>
     </div>
   );
