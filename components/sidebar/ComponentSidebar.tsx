@@ -11,27 +11,27 @@ const SidebarItem = React.memo(({ component, isFav, onDragStart, toggleFavoriteC
   if (!component) return null;
   return (
     <div
-      className="relative group flex flex-col items-center justify-center p-3 gap-2 bg-background border rounded-lg cursor-grab hover:border-primary/50 hover:bg-muted/50 transition-colors shadow-sm"
+      className="relative group flex flex-col items-center justify-center p-3 gap-2 bg-background border rounded-lg cursor-grab hover:border-primary/80 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ease-out"
       draggable
       onDragStart={(e) => onDragStart(e, component.id)}
       title={component.description}
     >
       <button 
-        className={`absolute top-1 right-1 p-1 z-10 transition-opacity ${isFav ? 'opacity-100 text-yellow-500' : 'opacity-0 group-hover:opacity-100 text-muted-foreground hover:text-yellow-500'}`}
+        className={`absolute top-0 right-0 p-2 w-8 h-8 flex items-center justify-center z-10 transition-opacity ${isFav ? 'opacity-100 text-yellow-500' : 'opacity-0 group-hover:opacity-100 text-muted-foreground hover:text-yellow-500'}`}
         onClick={(e) => {
           e.stopPropagation();
           toggleFavoriteComponent(component.id);
         }}
         title={isFav ? "Remove from favorites" : "Add to favorites"}
       >
-        <Star className={`w-3 h-3 ${isFav ? 'fill-yellow-500 text-yellow-500' : ''}`} />
+        <Star className={`w-3.5 h-3.5 ${isFav ? 'fill-yellow-500 text-yellow-500' : ''}`} />
       </button>
       <DynamicIcon 
         iconName={component.iconName} 
         iconType={component.iconType || 'lucide'} 
-        className={`w-6 h-6 ${component.iconType === 'si' ? '' : 'text-foreground'}`} 
+        className={`w-6 h-6 ${component.iconType === 'si' ? '' : 'text-foreground'} group-hover:scale-110 transition-transform duration-200`} 
       />
-      <span className="text-[10px] text-center font-medium leading-tight">
+      <span className="text-[10px] text-center font-medium leading-tight text-muted-foreground group-hover:text-foreground transition-colors duration-200">
         {component.name}
       </span>
     </div>
