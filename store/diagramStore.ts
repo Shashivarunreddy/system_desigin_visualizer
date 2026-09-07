@@ -53,16 +53,11 @@ export const useDiagramStore = create<DiagramState>()(
           return { recentComponents: [id, ...filtered].slice(0, 20) };
         });
       },
-      toggleFavoriteComponent: (id: string) => {
-        set((state) => {
-          const isFav = state.favoriteComponents.includes(id);
-          if (isFav) {
-            return { favoriteComponents: state.favoriteComponents.filter(c => c !== id) };
-          } else {
-            return { favoriteComponents: [...state.favoriteComponents, id] };
-          }
-        });
-      },
+      toggleFavoriteComponent: (id: string) => set((state) => ({
+        favoriteComponents: state.favoriteComponents.includes(id) 
+          ? state.favoriteComponents.filter(c => c !== id) 
+          : [...state.favoriteComponents, id]
+      })),
       onNodesChange: (changes: NodeChange[]) => {
         set({
           nodes: applyNodeChanges(changes, get().nodes),

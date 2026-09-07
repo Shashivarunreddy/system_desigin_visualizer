@@ -212,7 +212,7 @@ function FlowCanvas() {
         className="bg-muted/10"
       >
         <Background color="hsl(var(--muted-foreground))" gap={16} size={1} className="opacity-20" />
-        <Controls className="bg-background border shadow-sm rounded-md overflow-hidden" />
+        {/* <Controls className="bg-background border shadow-sm rounded-md overflow-hidden" /> */}
       </ReactFlow>
     </div>
   );

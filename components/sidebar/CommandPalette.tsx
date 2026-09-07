@@ -1,17 +1,16 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useDeferredValue } from 'react';
 import { Search, ChevronRight } from 'lucide-react';
 import { COMPONENT_REGISTRY, GENERIC_COMPONENTS } from '@/data/components';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 import { useDiagramStore } from '@/store/diagramStore';
 import { getComponent } from '@/data/components';
-import { useDebounce } from '@/hooks/useDebounce';
 
 export function CommandPalette() {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const debouncedSearchQuery = useDebounce(searchQuery, 150);
+  const debouncedSearchQuery = useDeferredValue(searchQuery);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 

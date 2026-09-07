@@ -8,24 +8,6 @@ export function getOutgoingConnections(nodeId: string, edges: Edge[]): Edge[] {
   return edges.filter(e => e.source === nodeId);
 }
 
-export function getConnectedNodes(nodeId: string, edges: Edge[], nodes: Node[]): Node[] {
-  const connectedIds = new Set<string>();
-  edges.forEach(e => {
-    if (e.source === nodeId) connectedIds.add(e.target);
-    if (e.target === nodeId) connectedIds.add(e.source);
-  });
-  return nodes.filter(n => connectedIds.has(n.id));
-}
-
-export function getUpstreamNodes(nodeId: string, edges: Edge[], nodes: Node[]): Node[] {
-  const incomingIds = new Set(getIncomingConnections(nodeId, edges).map(e => e.source));
-  return nodes.filter(n => incomingIds.has(n.id));
-}
-
-export function getDownstreamNodes(nodeId: string, edges: Edge[], nodes: Node[]): Node[] {
-  const outgoingIds = new Set(getOutgoingConnections(nodeId, edges).map(e => e.target));
-  return nodes.filter(n => outgoingIds.has(n.id));
-}
 
 /**
  * Returns all nodes and edges in the same connected subgraph as the starting node.

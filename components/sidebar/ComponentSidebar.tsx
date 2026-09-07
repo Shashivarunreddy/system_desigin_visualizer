@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useDeferredValue } from 'react';
 import { COMPONENT_REGISTRY, GENERIC_COMPONENTS } from '@/data/components';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 import { Search, ChevronDown, ChevronRight, Star } from 'lucide-react';
 import { useDiagramStore } from '@/store/diagramStore';
-import { useDebounce } from '@/hooks/useDebounce';
 
 const SidebarItem = React.memo(({ component, isFav, onDragStart, toggleFavoriteComponent }: { component: any, isFav: boolean, onDragStart: any, toggleFavoriteComponent: any }) => {
   if (!component) return null;
@@ -49,7 +48,7 @@ export function ComponentSidebar() {
   };
 
   const [searchQuery, setSearchQuery] = useState('');
-  const debouncedSearchQuery = useDebounce(searchQuery, 200);
+  const debouncedSearchQuery = useDeferredValue(searchQuery);
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
 
   const toggleCategory = (category: string) => {
