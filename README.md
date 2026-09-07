@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# System Design Visualizer
+
+An intuitive, drag-and-drop cloud architecture diagramming tool built for developers. Design complex distributed systems, microservices, and cloud topologies with ease, speed, and precision.
+
+> **Status:** Active Development — [Contributions Welcome!](#-contributing)
+
+---
+
+## Features
+
+- **Drag & Drop Canvas**: Built on top of React Flow, offering a buttery smooth, interactive, and zoomable canvas.
+- **Rich Component Library**: Includes 100+ generic and technology-specific components (Databases, Compute, Messaging, Applications).
+- **Full-Color Tech Logos**: Automatic rendering of full-color brand SVG logos (powered by simpleicons & devicon) when specific technologies like Postgres, AWS DynamoDB, Kafka, or React are selected.
+- **Command Palette (`Ctrl+K`)**: Lightning-fast keyboard navigation to search and insert components instantly onto your canvas.
+- **Live Properties Panel**: Dynamically edit node labels, roles, specific technologies, and underlying infrastructure details.
+- **Exporting Options**: Export your masterpiece as a high-quality PNG image for presentations or JSON for sharing and version control.
+- **Dark Mode Native**: A sleek, premium developer-focused UI using Slate and Indigo accents.
+
+## Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **UI & Styling**: React, [Tailwind CSS](https://tailwindcss.com/)
+- **Canvas Engine**: [React Flow (@xyflow/react)](https://reactflow.dev/)
+- **State Management**: [Zustand](https://zustand-demo.pmnd.rs/) (with persistent local storage)
+- **Icons**: [Lucide React](https://lucide.dev/), Simple Icons, and Devicon CDNs
+- **Exporting**: `html-to-image`
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+Make sure you have Node.js (v18+) installed.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Shashivarunreddy/system_desigin_visualizer.git
+   cd system_desigin_visualizer
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or yarn / pnpm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We would absolutely love for you to contribute! Whether it's adding new technologies to the component registry, improving the UI, or optimizing the canvas logic, this project is open for collaboration.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### How to Collaborate
 
-## Deploy on Vercel
+1. **Fork the repo** and create your branch from `main`.
+2. **If you've added code**, ensure your code follows the existing Tailwind + React patterns. 
+3. **If you want to add a new technology**, check out `data/components/catalogs` (it's extremely easy to add a new JSON object to the registry!).
+4. **Open a Pull Request** with a clear description of what you've added or fixed.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Roadmap / Good First Issues
+- [ ] Add Collaborative Multiplayer Editing (e.g., using Yjs or Liveblocks).
+- [ ] Support more export formats (SVG, PDF).
+- [ ] Implement automatic layout arrangement algorithms.
+- [ ] Add connection styling (dashed lines, animated flows for data).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
