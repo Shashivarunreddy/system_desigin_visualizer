@@ -144,6 +144,7 @@ function FlowCanvas() {
           componentId: componentDef.id,
           role: componentDef.role || 'service',
           technology: componentDef.technology,
+          logoUrl: componentDef.logoUrl,
           metadata: {},
         },
       };

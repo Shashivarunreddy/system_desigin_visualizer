@@ -38,6 +38,7 @@ export const BaseNode = React.memo(function BaseNode(props: BaseNodeProps) {
                 iconName: comp.iconName,
                 iconType: comp.iconType,
                 technology: comp.technology,
+                logoUrl: comp.logoUrl,
                 label: comp.name
               });
             }
@@ -112,7 +113,15 @@ export const BaseNode = React.memo(function BaseNode(props: BaseNodeProps) {
 
         {/* The Visual Representation */}
         <div className="relative w-full h-full flex items-center justify-center">
-          {children}
+          {nodeData.logoUrl ? (
+            <img 
+              src={nodeData.logoUrl} 
+              alt={nodeData.technology || nodeTitle} 
+              className="w-full h-full object-contain p-2 filter drop-shadow-sm transition-transform group-hover:scale-105" 
+            />
+          ) : (
+            children
+          )}
         </div>
 
         {/* Labels below the node */}

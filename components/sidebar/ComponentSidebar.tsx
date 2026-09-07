@@ -25,11 +25,19 @@ const SidebarItem = React.memo(({ component, isFav, onDragStart, toggleFavoriteC
       >
         <Star className={`w-3.5 h-3.5 ${isFav ? 'fill-yellow-500 text-yellow-500' : ''}`} />
       </button>
-      <DynamicIcon 
-        iconName={component.iconName} 
-        iconType={component.iconType || 'lucide'} 
-        className={`w-6 h-6 ${component.iconType === 'si' ? '' : 'text-foreground'} group-hover:scale-110 transition-transform duration-200`} 
-      />
+      {component.logoUrl ? (
+        <img 
+          src={component.logoUrl} 
+          alt={component.name}
+          className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-200"
+        />
+      ) : (
+        <DynamicIcon 
+          iconName={component.iconName} 
+          iconType={component.iconType || 'lucide'} 
+          className={`w-6 h-6 ${component.iconType === 'si' ? '' : 'text-foreground'} group-hover:scale-110 transition-transform duration-200`} 
+        />
+      )}
       <span className="text-[10px] text-center font-medium leading-tight text-muted-foreground group-hover:text-foreground transition-colors duration-200">
         {component.name}
       </span>

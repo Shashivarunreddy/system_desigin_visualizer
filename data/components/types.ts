@@ -53,4 +53,5 @@ export interface SystemComponent {
   technology?: string; // Optional specific technology tag
   provider?: string; // Optional provider tag
   tags?: string[]; // Used for search
+  logoUrl?: string; // URL to the full-color SVG (e.g. devicon)
 }

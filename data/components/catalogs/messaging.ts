@@ -22,7 +22,8 @@ export const MESSAGING_COMPONENTS: SystemComponent[] = [
     visualType: 'queue',
     role: 'communication',
     technology: 'Kafka',
-    tags: ['event', 'stream', 'pubsub']
+    tags: ['event', 'stream', 'pubsub'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg'
   },
   {
     id: 'queue-rabbitmq',
@@ -34,7 +35,8 @@ export const MESSAGING_COMPONENTS: SystemComponent[] = [
     visualType: 'queue',
     role: 'communication',
     technology: 'RabbitMQ',
-    tags: ['queue', 'amqp']
+    tags: ['queue', 'amqp'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg'
   },
   {
     id: 'queue-sqs',

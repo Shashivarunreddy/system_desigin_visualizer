@@ -12,6 +12,7 @@ export type SystemNodeData = {
   componentId?: string;
   role: string;
   technology?: string;
+  logoUrl?: string;
 };
 
 export const SystemNode = React.memo(function SystemNode(props: NodeProps) {

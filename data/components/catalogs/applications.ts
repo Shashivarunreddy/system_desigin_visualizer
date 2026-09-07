@@ -33,7 +33,8 @@ export const APPLICATION_COMPONENTS: SystemComponent[] = [
     visualType: 'application',
     role: 'application',
     technology: 'React',
-    tags: ['frontend', 'ui']
+    tags: ['frontend', 'ui'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
   },
   {
     id: 'app-nextjs',
@@ -45,7 +46,8 @@ export const APPLICATION_COMPONENTS: SystemComponent[] = [
     visualType: 'application',
     role: 'application',
     technology: 'Next.js',
-    tags: ['frontend', 'react', 'ssr']
+    tags: ['frontend', 'react', 'ssr'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg'
   },
   {
     id: 'app-nodejs',
@@ -57,7 +59,8 @@ export const APPLICATION_COMPONENTS: SystemComponent[] = [
     visualType: 'application',
     role: 'service',
     technology: 'Node.js',
-    tags: ['backend', 'js']
+    tags: ['backend', 'js'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg'
   },
   {
     id: 'app-python',
@@ -69,6 +72,7 @@ export const APPLICATION_COMPONENTS: SystemComponent[] = [
     visualType: 'application',
     role: 'service',
     technology: 'Python',
-    tags: ['backend']
+    tags: ['backend'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
   }
 ];

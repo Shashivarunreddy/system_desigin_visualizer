@@ -22,7 +22,8 @@ export const DATABASE_COMPONENTS: SystemComponent[] = [
     visualType: 'database',
     role: 'database',
     technology: 'PostgreSQL',
-    tags: ['sql', 'relational']
+    tags: ['sql', 'relational'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg'
   },
   {
     id: 'database-mysql',
@@ -34,7 +35,8 @@ export const DATABASE_COMPONENTS: SystemComponent[] = [
     visualType: 'database',
     role: 'database',
     technology: 'MySQL',
-    tags: ['sql', 'relational']
+    tags: ['sql', 'relational'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg'
   },
   {
     id: 'database-mongodb',
@@ -46,7 +48,8 @@ export const DATABASE_COMPONENTS: SystemComponent[] = [
     visualType: 'database',
     role: 'database',
     technology: 'MongoDB',
-    tags: ['nosql', 'document']
+    tags: ['nosql', 'document'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg'
   },
   {
     id: 'database-redis',
@@ -58,7 +61,8 @@ export const DATABASE_COMPONENTS: SystemComponent[] = [
     visualType: 'database',
     role: 'database',
     technology: 'Redis',
-    tags: ['cache', 'nosql', 'in-memory']
+    tags: ['cache', 'nosql', 'in-memory'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg'
   },
   {
     id: 'database-dynamodb',
@@ -71,7 +75,8 @@ export const DATABASE_COMPONENTS: SystemComponent[] = [
     role: 'database',
     technology: 'DynamoDB',
     provider: 'AWS',
-    tags: ['aws', 'nosql', 'key-value']
+    tags: ['aws', 'nosql', 'key-value'],
+    logoUrl: 'https://cdn.simpleicons.org/amazondynamodb/4053D6'
   },
   {
     id: 'database-cassandra',
@@ -83,6 +88,7 @@ export const DATABASE_COMPONENTS: SystemComponent[] = [
     visualType: 'database',
     role: 'database',
     technology: 'Cassandra',
-    tags: ['nosql', 'column']
+    tags: ['nosql', 'column'],
+    logoUrl: 'https://cdn.simpleicons.org/apachecassandra/1287B1'
   }
 ];

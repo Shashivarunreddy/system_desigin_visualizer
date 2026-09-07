@@ -35,7 +35,8 @@ export const COMPUTE_COMPONENTS: SystemComponent[] = [
     visualType: 'server',
     role: 'compute',
     technology: 'Docker',
-    tags: ['container']
+    tags: ['container'],
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg'
   },
   {
     id: 'serverless-lambda',

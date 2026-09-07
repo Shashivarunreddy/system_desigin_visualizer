@@ -104,6 +104,7 @@ export function CommandPalette() {
         componentId: componentDef.id,
         role: componentDef.role || 'service',
         technology: componentDef.technology,
+        logoUrl: componentDef.logoUrl,
         metadata: {},
       },
     };
@@ -149,11 +150,19 @@ export function CommandPalette() {
                 onMouseEnter={() => setSelectedIndex(index)}
               >
                 <div className={`p-1.5 rounded-md ${index === selectedIndex ? 'bg-primary-foreground/20' : 'bg-muted'}`}>
-                  <DynamicIcon 
-                    iconName={component.iconName} 
-                    iconType={component.iconType || 'lucide'} 
-                    className={`w-5 h-5 ${component.iconType === 'si' ? '' : (index === selectedIndex ? 'text-primary-foreground' : 'text-foreground')}`} 
-                  />
+                  {component.logoUrl ? (
+                    <img 
+                      src={component.logoUrl} 
+                      alt={component.name}
+                      className="w-5 h-5 object-contain"
+                    />
+                  ) : (
+                    <DynamicIcon 
+                      iconName={component.iconName} 
+                      iconType={component.iconType || 'lucide'} 
+                      className={`w-5 h-5 ${component.iconType === 'si' ? '' : (index === selectedIndex ? 'text-primary-foreground' : 'text-foreground')}`} 
+                    />
+                  )}
                 </div>
                 <div className="flex flex-col flex-1">
                   <span className="text-sm font-medium">{component.name}</span>

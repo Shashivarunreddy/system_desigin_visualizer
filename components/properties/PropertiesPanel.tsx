@@ -103,6 +103,7 @@ export function PropertiesPanel() {
                     iconName: comp.iconName,
                     iconType: comp.iconType,
                     technology: comp.technology,
+                    logoUrl: comp.logoUrl,
                     label: comp.name // auto-update label to match new tech
                   });
                 }

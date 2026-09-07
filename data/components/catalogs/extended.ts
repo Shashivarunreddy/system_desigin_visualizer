@@ -559,15 +559,7 @@ export const EXTENDED_COMPONENTS: SystemComponent[] = [
     "iconType": "lucide",
     "role": "service"
   },
-  {
-    "id": "ext-redis",
-    "name": "Redis",
-    "category": "Data",
-    "description": "A generic redis component.",
-    "iconName": "redis",
-    "iconType": "si",
-    "role": "service"
-  },
+
   {
     "id": "ext-memcached",
     "name": "Memcached",

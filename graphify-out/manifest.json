@@ -12,9 +12,9 @@
     "semantic_hash": ""
   },
   "app/page.tsx": {
-    "mtime": 1788767415.6334372,
-    "seen": 1788767496.7863872,
-    "ast_hash": "46646ec438a4c56b23f4db001fa05740",
+    "mtime": 1788767561.8594034,
+    "seen": 1788768313.6195664,
+    "ast_hash": "ff89191abbf9f2d444bf7555538dd478",
     "semantic_hash": ""
   },
   "eslint.config.mjs": {
@@ -54,9 +54,9 @@
     "semantic_hash": ""
   },
   "components/canvas/Canvas.tsx": {
-    "mtime": 1788767446.781213,
-    "seen": 1788767496.7864,
-    "ast_hash": "5fac3f826014d7d4988ad1b4518efe96",
+    "mtime": 1788768229.2598972,
+    "seen": 1788768313.6195798,
+    "ast_hash": "f4aba353894a1910ca71d4211ef8af9c",
     "semantic_hash": ""
   },
   "components/sidebar/ComponentSidebar.tsx": {
@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "components/toolbar/TopToolbar.tsx": {
-    "mtime": 1788767473.2986553,
-    "seen": 1788767496.7864559,
-    "ast_hash": "754e8ffd7f4fc9357bd3c413d8ef7c0c",
+    "mtime": 1788767619.2646055,
+    "seen": 1788768313.6196434,
+    "ast_hash": "245df091dde3e9b5eef7b88a4b964a17",
     "semantic_hash": ""
   },
   "components/ui/button.tsx": {
@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "components/properties/PropertiesPanel.tsx": {
-    "mtime": 1788715225.9745882,
-    "seen": 1788766907.0939865,
-    "ast_hash": "e02a679b20478814d993b83cdb3b21c6",
+    "mtime": 1788768278.8527043,
+    "seen": 1788768313.6196291,
+    "ast_hash": "c64e51ec887f045e30105af834718fd2",
     "semantic_hash": ""
   },
   "components/theme-provider.tsx": {
@@ -228,9 +228,9 @@
     "semantic_hash": ""
   },
   "components/nodes/BaseNode.tsx": {
-    "mtime": 1788716590.564569,
-    "seen": 1788766907.0939686,
-    "ast_hash": "f66f17aa346ad817f0932222014b90cb",
+    "mtime": 1788768290.1383865,
+    "seen": 1788768313.6195967,
+    "ast_hash": "61c4aa0f942b457af570da209e7c8130",
     "semantic_hash": ""
   },
   "components/nodes/DatabaseNode.tsx": {
@@ -282,9 +282,9 @@
     "semantic_hash": ""
   },
   "components/sidebar/CommandPalette.tsx": {
-    "mtime": 1788767085.6858358,
-    "seen": 1788767496.7864459,
-    "ast_hash": "d47a523c71bf68af786ceb8ce949e5d0",
+    "mtime": 1788768231.36668,
+    "seen": 1788768313.6196322,
+    "ast_hash": "68a6d701a94579d569cc722d95cfece2",
     "semantic_hash": ""
   },
   "components/ui/DynamicIcon.tsx": {
@@ -300,21 +300,21 @@
     "semantic_hash": ""
   },
   "data/components/catalogs/applications.ts": {
-    "mtime": 1788581184.781487,
-    "seen": 1788766907.0940073,
-    "ast_hash": "314c353b1f59d35b2707aad2a2b9a0e6",
+    "mtime": 1788768206.9014316,
+    "seen": 1788768313.619657,
+    "ast_hash": "ee71e8e8d67e23c5eeb8e15f3986a377",
     "semantic_hash": ""
   },
   "data/components/catalogs/compute.ts": {
-    "mtime": 1788581173.2489066,
-    "seen": 1788766907.0940094,
-    "ast_hash": "422dc713001d6d6e0bf559e18788c3bd",
+    "mtime": 1788768209.0427623,
+    "seen": 1788768313.6196594,
+    "ast_hash": "272dae99570994519fd376f1cd6edb5e",
     "semantic_hash": ""
   },
   "data/components/catalogs/databases.ts": {
-    "mtime": 1788581152.65038,
-    "seen": 1788766907.0940108,
-    "ast_hash": "fa95a74b78544e9dcf78fc1fb14fbb90",
+    "mtime": 1788768186.9891562,
+    "seen": 1788768313.619663,
+    "ast_hash": "9bbf9af73b19c5b6cd89890ba087fdd4",
     "semantic_hash": ""
   },
   "data/components/catalogs/extended.ts": {
@@ -324,9 +324,9 @@
     "semantic_hash": ""
   },
   "data/components/catalogs/messaging.ts": {
-    "mtime": 1788581162.9323013,
-    "seen": 1788766907.0940142,
-    "ast_hash": "799b358a4c33d3fd05a7dd602313d3cc",
+    "mtime": 1788768211.2420874,
+    "seen": 1788768313.619669,
+    "ast_hash": "d57c2c0cbca422beab8c0f3bb76dcf46",
     "semantic_hash": ""
   },
   "data/components/catalogs/others.ts": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "data/components/types.ts": {
-    "mtime": 1788715928.275146,
-    "seen": 1788766907.0940177,
-    "ast_hash": "2e55a989b7266177be65fc1948f82d02",
+    "mtime": 1788768173.8551006,
+    "seen": 1788768313.6196778,
+    "ast_hash": "a0b65ea12c9e195d280d23a302e9ac01",
     "semantic_hash": ""
   },
   "data/relationships.ts": {
