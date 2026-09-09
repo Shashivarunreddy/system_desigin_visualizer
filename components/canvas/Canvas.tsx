@@ -15,35 +15,16 @@ import {
 import '@xyflow/react/dist/style.css';
 
 import { useDiagramStore } from '@/store/diagramStore';
-import { SystemNode } from '@/components/nodes/SystemNode';
-import { PersonNode } from '@/components/nodes/PersonNode';
-import { ApplicationNode } from '@/components/nodes/ApplicationNode';
-import { DatabaseNode } from '@/components/nodes/DatabaseNode';
-import { QueueNode } from '@/components/nodes/QueueNode';
-import { ServerNode } from '@/components/nodes/ServerNode';
-import { ApiNode } from '@/components/nodes/ApiNode';
-import { GatewayNode } from '@/components/nodes/GatewayNode';
-import { NetworkNode } from '@/components/nodes/NetworkNode';
-import { SecurityNode } from '@/components/nodes/SecurityNode';
-import { ExternalNode } from '@/components/nodes/ExternalNode';
+import { UniversalNode } from '@/components/nodes/UniversalNode';
 import { CustomEdge } from '@/components/edges/CustomEdge';
 import { FloatingEdge } from '@/components/edges/FloatingEdge';
 import { getComponent } from '@/data/components';
 import { getConnectedSystem } from '@/lib/architecture/graph';
 
-const nodeTypes = {
-  systemNode: SystemNode,
-  person: PersonNode,
-  application: ApplicationNode,
-  database: DatabaseNode,
-  queue: QueueNode,
-  server: ServerNode,
-  api: ApiNode,
-  gateway: GatewayNode,
-  network: NetworkNode,
-  security: SecurityNode,
-  external: ExternalNode,
-};
+const nodeTypes = Object.fromEntries(
+  ['systemNode', 'person', 'application', 'database', 'queue', 'server', 'api', 'gateway', 'network', 'security', 'external']
+  .map(type => [type, UniversalNode])
+);
 
 const edgeTypes = {
   customEdge: CustomEdge,

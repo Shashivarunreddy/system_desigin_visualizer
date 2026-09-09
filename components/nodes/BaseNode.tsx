@@ -1,7 +1,18 @@
 import React from 'react';
 import { Handle, Position, NodeProps, useConnection, NodeResizer, NodeToolbar } from '@xyflow/react';
 import { cn } from '@/lib/utils';
-import { SystemNodeData } from './SystemNode';
+import { IconType } from '@/data/components/types';
+
+export type SystemNodeData = {
+  label: string;
+  description?: string;
+  iconName: string;
+  iconType?: IconType;
+  componentId?: string;
+  role: string;
+  technology?: string;
+  logoUrl?: string;
+};
 import { useDiagramStore } from '@/store/diagramStore';
 import { getTechnologiesForRole, getComponent } from '@/data/components';
 
