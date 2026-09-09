@@ -78,9 +78,18 @@ export function FloatingEdge({
     finalMarkerEnd = markerEnd;
   }
 
+  // Determine animation direction based on edge direction
+  let animationDirection = 'normal';
+  if (direction === 'backward') {
+    animationDirection = 'reverse';
+  } else if (direction === 'bidirectional') {
+    animationDirection = 'alternate';
+  }
+
   const mergedStyle = {
     ...style,
     strokeDasharray,
+    ...(animated ? { animationDirection } : {}),
   };
 
   return (

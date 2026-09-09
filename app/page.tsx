@@ -1,7 +1,10 @@
+"use client";
+
 import { TopToolbar } from '@/components/toolbar/TopToolbar';
 import { ComponentSidebar } from '@/components/sidebar/ComponentSidebar';
 import { PropertiesPanel } from "@/components/properties/PropertiesPanel";
-import { Canvas } from '@/components/canvas/Canvas';
+import dynamic from 'next/dynamic';
+const Canvas = dynamic(() => import('@/components/canvas/Canvas').then(mod => mod.Canvas), { ssr: false, loading: () => <div className="flex-1 flex items-center justify-center bg-muted/10 h-full w-full relative"><span className="text-muted-foreground animate-pulse text-sm">Loading Canvas...</span></div> });
 import { CommandPalette } from '@/components/sidebar/CommandPalette';
 
 export default function Home() {

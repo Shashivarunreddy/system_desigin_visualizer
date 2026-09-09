@@ -46,15 +46,7 @@ export const EXTENDED_COMPONENTS: SystemComponent[] = [
     "iconType": "lucide",
     "role": "service"
   },
-  {
-    "id": "ext-operator",
-    "name": "Operator",
-    "category": "People",
-    "description": "A generic operator component.",
-    "iconName": "User",
-    "iconType": "lucide",
-    "role": "service"
-  },
+
   {
     "id": "ext-guest",
     "name": "Guest",

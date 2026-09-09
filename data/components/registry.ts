@@ -112,21 +112,6 @@ export function getComponent(id: string): SystemComponent | undefined {
   return COMPONENT_REGISTRY.find(c => c.id === id) || GENERIC_COMPONENTS.find(c => c.id === id);
 }
 
-export function searchComponents(query: string): SystemComponent[] {
-  if (!query) return COMPONENT_REGISTRY;
-  
-  const q = query.toLowerCase();
-  return COMPONENT_REGISTRY.filter(c => 
-    c.name.toLowerCase().includes(q) ||
-    c.category.toLowerCase().includes(q) ||
-    c.tags?.some(t => t.toLowerCase().includes(q)) ||
-    c.description?.toLowerCase().includes(q)
-  );
-}
-
-export function getComponentsByCategory(category: ComponentCategory): SystemComponent[] {
-  return COMPONENT_REGISTRY.filter(c => c.category === category);
-}
 
 export function getTechnologiesForRole(role: string): SystemComponent[] {
   return COMPONENT_REGISTRY.filter(c => c.role === role && c.technology);

@@ -66,11 +66,20 @@ export function CustomEdge({
     finalMarkerEnd = markerEnd;
   }
 
+  // Determine animation direction based on edge direction
+  let animationDirection = 'normal';
+  if (direction === 'backward') {
+    animationDirection = 'reverse';
+  } else if (direction === 'bidirectional') {
+    animationDirection = 'alternate';
+  }
+
   // Merge dynamic styles
   const dynamicStyle = {
     ...style,
     strokeDasharray,
     strokeWidth: 2,
+    ...(animated ? { animationDirection } : {}),
   };
 
   return (

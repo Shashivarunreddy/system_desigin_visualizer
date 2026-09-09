@@ -14,7 +14,7 @@ export type SystemNodeData = {
   logoUrl?: string;
 };
 import { useDiagramStore } from '@/store/diagramStore';
-import { getTechnologiesForRole, getComponent } from '@/data/components';
+import { getTechnologiesForRole, getComponent } from '@/data/components/registry';
 
 interface BaseNodeProps extends NodeProps {
   children: React.ReactNode;

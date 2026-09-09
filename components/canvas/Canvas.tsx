@@ -18,7 +18,7 @@ import { useDiagramStore } from '@/store/diagramStore';
 import { UniversalNode } from '@/components/nodes/UniversalNode';
 import { CustomEdge } from '@/components/edges/CustomEdge';
 import { FloatingEdge } from '@/components/edges/FloatingEdge';
-import { getComponent } from '@/data/components';
+import { getComponent } from '@/data/components/registry';
 import { getConnectedSystem } from '@/lib/architecture/graph';
 
 const nodeTypes = Object.fromEntries(

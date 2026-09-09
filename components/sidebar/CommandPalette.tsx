@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect, useRef, useMemo, useDeferredValue } from 'react';
 import { Search, ChevronRight } from 'lucide-react';
-import { COMPONENT_REGISTRY, GENERIC_COMPONENTS } from '@/data/components';
+import { COMPONENT_REGISTRY, GENERIC_COMPONENTS } from '@/data/components/registry';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 import { useDiagramStore } from '@/store/diagramStore';
-import { getComponent } from '@/data/components';
+import { getComponent } from '@/data/components/registry';
 
 export function CommandPalette() {
   const [isOpen, setIsOpen] = useState(false);

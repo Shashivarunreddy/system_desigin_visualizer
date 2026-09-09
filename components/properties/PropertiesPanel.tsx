@@ -5,7 +5,7 @@ import { useDiagramStore } from '@/store/diagramStore';
 import { useShallow } from 'zustand/react/shallow';
 import { Trash2, Network } from 'lucide-react';
 import { getIncomingConnections, getOutgoingConnections } from '@/lib/architecture/graph';
-import { getTechnologiesForRole, getComponent } from '@/data/components';
+import { getTechnologiesForRole, getComponent } from '@/data/components/registry';
 
 export function PropertiesPanel() {
   const selectedNodes = useDiagramStore(useShallow((state) => state.nodes.filter((n) => n.selected)));

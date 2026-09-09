@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo, useDeferredValue } from 'react';
-import { COMPONENT_REGISTRY, GENERIC_COMPONENTS } from '@/data/components';
+import { COMPONENT_REGISTRY, GENERIC_COMPONENTS } from '@/data/components/registry';
 import { DynamicIcon } from '@/components/ui/DynamicIcon';
 import { Search, ChevronDown, ChevronRight, Star } from 'lucide-react';
 import { useDiagramStore } from '@/store/diagramStore';
